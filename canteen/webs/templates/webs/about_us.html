@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,45 +13,93 @@
   <script src="https://kit.fontawesome.com/2ec1aea2bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <style>
+    .card {
+      display:"flex";
+      justify-content: space-around center;
+    }
+  </style>
   <!-- 네비게이션 바 -->
-  {% include './navbar.html' %}
+  {% include 'navbar.html' %}
+  <div class="row">
+    {% include 'sidebar.html' %}
 
-  <div class="container">
-    
+    <div class="col-12">
+      <!-- 상단 검색 부분-->
+      <div class="container">
+        <div class="row" style="margin-top: 15px;">
+          <div class="col-9 align-self-center">
+            info
+          </div>
+          <div class="col-3 align-self-center">
+            One of three columns
+          </div>
+        </div>
+        <hr>
 
-    <div class="row" >
-      <div class="col">
-        여기는 우리에 대해 설명하는 페이지입니다.
-        다양한 설명을 작성할 수 있으면 좋겠네요.
+        <div class="container" id="con">
+        <div class="row">
+          <div class="col-12">
+            <div class="row justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top"src="{% static '/img/1.png' %}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">강청우</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{% static '/img/2.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">정호영</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{% static '/img/3.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">이정승</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{% static '/img/4.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">정지연</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{% static '/img/5.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">김수정</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="row">
+          <div class="col-9">
+          </div>
+          <div class="col-3">
+            
+          </div>
+        </div>
       </div>
     </div>
 
-
   </div>
+  <br>
 
 
-  {% include './footer.html' %}
+  {% include 'footer.html' %}
 
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

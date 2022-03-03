@@ -14,11 +14,9 @@
 <body>
   <!-- 네비게이션 바 -->
   {% include './navbar.html' %}
-
   <!-- 상단 검색 부분-->
   <div class="container">
     <div class="row" style="margin-top: 15px;">
-
       <div class="col-9 align-self-center">
         {% if user_name %}
           <script type="text/javascript">
@@ -80,7 +78,7 @@
   <br>
 
 
-  {% include './footer.html' %}
+  {% include 'footer.html' %}
 
   <script language="javascript">
     function set_loct_city(object){
@@ -130,22 +128,7 @@
       target.style.display = '';
     }
   </script>
-  {% if user_name %}
-  <script type="text/javascript">
-    target1 = document.getElementById('user_loct_state');
-    target1.style.display= 'none';
-    target2 = document.getElementById('signin');
-    target2.style.display= 'none';
-    target3 = document.getElementById('signup');
-    target3.style.display= 'none';
-  </script>
-  {% endif %}
-  {% if not user_name %}
-  <script type="text/javascript">
-    target1 = document.getElementById('signout');
-    target1.style.display= 'none';
-  </script>
-  {% endif %}
+  
   
 
 

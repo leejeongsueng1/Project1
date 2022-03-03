@@ -1,5 +1,9 @@
 <html>
+  {% include './sidebar.html' %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+    </div>
     <div class="container">
       <a class="navbar-brand" href="/main/">급식소 찾기</a>
       <button
@@ -29,21 +33,21 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="accounts/login/" id="signin"
+              href="/main/accounts/login/" id="signin"
               >로그인</a
             >
           </li>
           <li class="nav-item" id="signout">
             <a
               class="nav-link"
-              href="accounts/logout/"
+              href="/main/accounts/logout/"
               >로그아웃</a
             >
           </li>
           <li class="nav-item" id="signup">
             <a
               class="nav-link"
-              href="accounts/signup"
+              href="/main/accounts/signup"
               >회원가입</a
             >
           </li>
@@ -52,6 +56,23 @@
     </div>
   </nav>
 
+
+  {% if user_name %}
+  <script type="text/javascript">
+    target1 = document.getElementById('user_loct_state');
+    target1.style.display= 'none';
+    target2 = document.getElementById('signin');
+    target2.style.display= 'none';
+    target3 = document.getElementById('signup');
+    target3.style.display= 'none';
+  </script>
+  {% endif %}
+  {% if not user_name %}
+  <script type="text/javascript">
+    target1 = document.getElementById('signout');
+    target1.style.display= 'none';
+  </script>
+  {% endif %}
  
 </html>
 
