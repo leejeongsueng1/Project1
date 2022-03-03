@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+</head>  
+<body>
+	<div id="map" style="width:48em; height: 45em;;"></div>
+	<p>
+        <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> 
+        <button onclick="setBounds()">지도 범위 재설정 하기</button> 
+    </p>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b981facb932c0551e606c84cec0bf6e"></script>
+	<script>
+
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				mapOption = {
+					center: new kakao.maps.LatLng(35.117006975877224, 129.08991999990096), // 지도의 중심좌표
+					level: 3, // 지도의 확대 레벨
+					mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+				}; 
+			// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+        	// content:'시설명', latlng:위도, 경도, address:'소재지도로명주소or소재지지번주소', tel:'전화번호'
+			var map = new kakao.maps.Map(mapContainer, mapOption); 
+			var positions = [
+			{
+				content: '용당캠 산학협력관', 
+				latlng: new kakao.maps.LatLng(35.1167458905612, 129.08949352870223),
+				address: '부산광역시 남구 신선로 365',
+				tel: '☎ 051-629-5215',
+			},
+			{
+				content: '용담캠 한미락식당', 
+				latlng: new kakao.maps.LatLng(35.116822090431576, 129.09262902183374),
+				address: '부산광역시 남구 용당동 251',
+				tel: '☎ 051-629-7518'
+			},
+			{
+				content: '맥도날드 부산동명대DT', 
+				latlng: new kakao.maps.LatLng(35.1231686739599, 129.0995448354368),
+				address: '부산광역시 남구 용당동 신선로 424',
+				tel: '☎ 070-7209-0622'
+            },
+			];
+			// 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+			var bounds = new  kakao.maps.LatLngBounds();
+			for (var i = 0; i < positions.length; i ++) {
+				// 지도에 마커를 생성하고 표시한다
+				var marker = new kakao.maps.Marker({
+					// 마커 표시할 지도
+					map: map, 
+					// 마커가 표시될 위치입니다 
+					position: positions[i].latlng,
+				});
+					// 인포윈도우에 표시할 내용
+				var iwContent = positions[i].content, 
+					// removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+     				iwRemoveable = true;
+				// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성
+				// 마커 위에 표시할 인포윈도우를 생성
+				var infowindow = new kakao.maps.InfoWindow({
+					// 인포윈도우에 표출될 내용
+					content : iwContent,
+					removable : iwRemoveable,
+				});
+				// LatLngBounds 객체에 좌표 추가
+				bounds.extend(positions[i].latlng);
+				// 마커에 클릭 이벤트 등록
+				// for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됨
+				kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+			}
+			// 인포윈도우를 표시하는 클로저를 만드는 함수s
+			function makeOverListener(map, marker, infowindow) {
+				return function() {
+					// 인포윈도우를 지도에 표시한다
+					infowindow.open(map, marker);
+				};
+			}
+			// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+			var zoomControl = new kakao.maps.ZoomControl();
+			map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+			// 지도 중심을 부드럽게 이동시키기
+            function panTo() {
+                // 이동할 위도 경도 위치를 생성합니다 
+                var moveLatLon = new kakao.maps.LatLng(35.11882917309454, 129.09161086107167);
+                // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+                map.panTo(moveLatLon);            
+            }
+            function setBounds() {
+                // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+                // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+                map.setBounds(bounds);
+            }
+	</script>
+</script>
+
+</body>
+</html>
