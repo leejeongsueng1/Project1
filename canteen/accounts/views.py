@@ -117,6 +117,7 @@ def login(request):
 def logout(request):
     if request.session.get('user'):
         del(request.session['user'])
+        request.session.flush()
     return redirect('/main')
 
 
