@@ -2,75 +2,68 @@
 {% load static %}
 {% block content%}
 
-  <div class="col-12">
-    <!-- 상단 검색 부분-->
-    <div class="container">
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-9 align-self-center">
-          info
-        </div>
-        <div class="col-3 align-self-center">
-          One of three columns
-        </div>
+<div class="col-12">
+  <!-- 상단 검색 부분-->
+  <div class="container">
+    <div class="row" style="margin-top: 15px;">
+      <div class="col-9 align-self-center">
+        info
       </div>
-      <hr>
+      <div class="col-3 align-self-center">
+        One of three columns
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
 
-      <div class="container" id="con">
-      <div class="row">
-        <div class="col-12">
-          <div class="row justify-content-center">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top"src="{% static '/img/1.png' %}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">강청우</p>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{% static '/img/2.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">정호영</p>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{% static '/img/3.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">이정승</p>
-            </div>
-          </div>
-          
-        </div>
+<section class="py-5">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12">
         <div class="row justify-content-center">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{% static '/img/4.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">정지연</p>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{% static '/img/5.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">김수정</p>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top"src="{% static '/img/1.png' %}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">강청우</p>
           </div>
         </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{% static '/img/2.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">정호영</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{% static '/img/3.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">이정승</p>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-
-      <div class="row">
-        <div class="col-9">
+      <div class="row justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{% static '/img/4.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">정지연</p>
+          </div>
         </div>
-        <div class="col-3">
-          
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{% static '/img/5.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">김수정</p>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
-
+</section>
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
+  <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+  <div style="height: 20rem"></div>
 </div>
-<br>
-
   
 {% endblock %}
 
