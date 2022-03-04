@@ -1,59 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>배부르다</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/2ec1aea2bf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- 네비게이션 바 -->
-  {% include './navbar.html' %}
-  <!-- 상단 검색 부분-->
+{% extends 'base.html'%}
+
+
+{% block content%}
   <div class="container">
     <div class="row" style="margin-top: 15px;">
       <div class="col-9 align-self-center">
         {% if user_name %}
-          <script type="text/javascript">
-            target = document.getElementById('user_loct_state');
-            target.style.display= 'none';
-          </script>
+          
           안녕하세요 {{ user_name }}님!&nbsp&nbsp&nbsp지역 : {{user_loct}}
         
         {% endif %}
 
-        <div class="dropdown d-inline ">
-          <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)"  >
-            <option value="none" hidden>=== 광역시/도 ===</option>
-            <option value="서울특별시">서울특별시</option>
-            <option value="인천광역시">인천광역시</option>
-            <option value="부산광역시">부산광역시</option>
-            <option value="대구광역시">대구광역시</option>
-            <option value="대전광역시">대전광역시</option>
-            <option value="광주광역시">광주광역시</option>
-            <option value="울산광역시">울산광역시</option>
-            <option value="경기도">경기도</option>
-            <option value="강원도">강원도</option>
-            <option value="충청북도">충청북도</option>
-            <option value="충청남도">충청남도</option>
-            <option value="경상북도">경상북도</option>
-            <option value="경상남도">경상남도</option>
-            <option value="전라북도">전라북도</option>
-            <option value="전라남도">전라남도</option>
-            <option value="제주시">제주시</option>
-          </select>
-          
-        </div>
-        <div class="dropdown d-inline">
-          <select name="user_loct_city" id="user_loct_city" style="display: none;">
-            
-          </select>
-        </div>
+       
       </div>
       <div class="col-3 align-self-center">
         하이
@@ -73,12 +31,8 @@
     </div>
   </div>
 
-
-  </div>
   <br>
 
-
-  {% include 'footer.html' %}
 
   <script language="javascript">
     function set_loct_city(object){
@@ -128,42 +82,21 @@
       target.style.display = '';
     }
   </script>
+  {% if user_name %}
+  <script>
+    
+    target = document.getElementById('user_loct_state');
+    target.style.display = 'none';
+    console.log(target)
+
+  </script>
+  {% endif %}
   
+
   
+{% endblock %}
 
-
-
-</body>
-</html>
-
-
-
-<!-- 
-
-
-
-<div id="map" style="width:100%; height:800px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5241e765fe07165746fb14277cca8ebb"></script>
-<script>
-  var container = document.getElementById('map');
-  var options = {
-    center: new kakao.maps.LatLng(35.11634, 129.08992),
-    level: 3
-  };
-
-  var map = new kakao.maps.Map(container, options);
-</script>
-
-
-
-
-
-
- -->
-
-
-
+  
 
 
 

@@ -57,7 +57,7 @@ ROOT_URLCONF = 'canteen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'webs/templates/webs')],
+        'DIRS': [BASE_DIR/'webs/templates/webs'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

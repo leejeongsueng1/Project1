@@ -15,6 +15,7 @@ DB_name = 'project1'
 
 # Create your views here.
 
+
 #메인 인덱스 페이지 호출
 def index(request):
 
@@ -31,15 +32,11 @@ def index(request):
                     'session_key':session_id,
                     'user_name': user_name,
                     'user_loct':user_loct}
-        return render(request,'webs/index.html', context)
+        return render(request,'index.html', context)
     except:
         users = None
-    return render(request,'webs/index.html')
+    return render(request,'index.html')
     
-    
-
-    
-
 
 def map(request):
     
@@ -93,18 +90,50 @@ def map(request):
                     'ct_info3' : ct_info3,
                     'ct_info4' : ct_info4,
                     'ct_info5' : ct_info5}
-        return render(request,'webs/map.html', context)
+        return render(request,'map.html', context)
     except:
         users = None
-    return render(request,'webs/map2.html')
+    return render(request,'map2.html')
 
 
 
 def about_us(request):
-    return render(request,'webs/about_us.html')
+    session_id = request.session.session_key
+    user_id = request.session.get('user')
+
+    try:
+        users = User.objects.filter(user_id = user_id)
+        for u in users:
+            user_name = u.user_name 
+            user_loct = u.user_loct
+        context = {'user_id':user_id,
+                    'session_key':session_id,
+                    'user_name': user_name,
+                    'user_loct':user_loct}
+        return render(request,'about_us.html', context)
+    except:
+        users = None
+    
+    return render(request,'about_us.html')
 
 
 def dashboard(request):
-    return render(request,'webs/dashboard.html')
+    session_id = request.session.session_key
+    user_id = request.session.get('user')
+
+    try:
+        users = User.objects.filter(user_id = user_id)
+        for u in users:
+            user_name = u.user_name 
+            user_loct = u.user_loct
+        context = {'user_id':user_id,
+                    'session_key':session_id,
+                    'user_name': user_name,
+                    'user_loct':user_loct}
+        return render(request,'dashboard.html', context)
+    except:
+        users = None
+    
+    return render(request,'dashboard.html')
 
     

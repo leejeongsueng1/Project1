@@ -7,6 +7,24 @@ from django.contrib.auth.hashers import make_password, check_password
 def signup(request):
     # 맨처음 화면로드시 GET방식으로 통신
     if request.method == 'GET':
+        #이미 로그인이 되어있는지 확인
+        session_id = request.session.session_key
+        user_id = request.session.get('user')
+
+        try:
+            users = User.objects.filter(user_id = user_id)
+            for u in users:
+                user_name = u.user_name 
+                user_loct = u.user_loct
+            context = {'user_id':user_id,
+                        'session_key':session_id,
+                        'user_name': user_name,
+                        'user_loct':user_loct}
+            #이미 로그인이 되어있다면 이미 로그인 중이라는 화면 출력
+            return render(request,'accounts/already_login.html', context)
+        except:
+            users = None
+        
         print('안된다')
         return render(request, 'accounts/signup.html')
     # signup의 form 의 method가 POST방식이므로 sign up 버튼을 클릭시 POST방식의 HTTP request발생
@@ -55,6 +73,24 @@ def signup(request):
 # 로그인
 def login(request):
     if request.method == 'GET':
+        #이미 로그인이 되어있는지 확인
+        session_id = request.session.session_key
+        user_id = request.session.get('user')
+
+        try:
+            users = User.objects.filter(user_id = user_id)
+            for u in users:
+                user_name = u.user_name 
+                user_loct = u.user_loct
+            context = {'user_id':user_id,
+                        'session_key':session_id,
+                        'user_name': user_name,
+                        'user_loct':user_loct}
+            #이미 로그인이 되어있다면 이미 로그인 중이라는 화면 출력
+            return render(request,'accounts/already_login.html', context)
+        except:
+            users = None
+        print('안된다')
         return render(request, 'accounts/login.html')
     elif request.method == 'POST':
         userid = request.POST.get('user_id')
@@ -64,14 +100,17 @@ def login(request):
         if not (userid and password):
             res_data['error'] = '모든 값을 입력해야합니다.'
         else:
-            user = User.objects.get(user_id=userid)
-            if check_password(password, user.user_pw):
-                request.session['user'] = user.user_id
-                # res_data['error']= '로그인 성공'
+            try:
+                user = User.objects.get(user_id=userid)
+                if check_password(password, user.user_pw):
+                    request.session['user'] = user.user_id
+                    # res_data['error']= '로그인 성공'
 
-                return redirect('/main')
-            else:
-                res_data['error'] = '비밀번호가 틀렸습니다.'
+                    return redirect('/main')
+                else:
+                    res_data['error'] = '비밀번호가 틀렸습니다.'
+            except:
+                res_data['error'] = '존재하지 않는 아이디입니다.'
 
         return render(request, 'accounts/login.html', res_data)
 
