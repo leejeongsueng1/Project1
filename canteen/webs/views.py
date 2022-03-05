@@ -81,22 +81,11 @@ def about_us(request):
 
 def dashboard(request):
     #----------------사용자 세션확인---------------------
-    session_id = request.session.session_key
-    user_id = request.session.get('user')
+    user_data = check_sessions(request)
 
-    try:
-        users = User.objects.filter(user_id = user_id)
-        for u in users:
-            user_name = u.user_name 
-            user_loct = u.user_loct
-        context = {'user_id':user_id,
-                    'session_key':session_id,
-                    'user_name': user_name,
-                    'user_loct':user_loct}
-        return render(request,'dashboard.html', context)
-    except:
-        users = None
-    
-    return render(request,'dashboard.html')
+    if user_data:
+        return render(request,'dashboard.html', user_data)
+    else:
+        return render(request,'dashboard.html')
 
     
