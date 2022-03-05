@@ -21,6 +21,7 @@ DB_name = 'project1'
 def index(request):
     # 세션키를 통해 유저아이디 탐색
     session_id = request.session.session_key
+    print('1')
     user_id = request.session.get('user')
     try:
         users = User.objects.filter(user_id = user_id)
@@ -32,12 +33,12 @@ def index(request):
                     'session_key':session_id,
                     'user_name': user_name,
                     'user_loct':user_loct}
-
-        return render(request,'index.html', context)
+        print(context)
+        return render(request,'main.html', context)
     except:
         users = None
         context = {'map':'map2'}
-    return render(request,'index.html',context)
+    return render(request,'main.html',context)
     
 # 맵 렌더링시키는 함수
 def map(request):
@@ -134,7 +135,7 @@ def map2(request):
         # 데이터 프레임을 리스트로 변환
         ct_loct = data['소재지도로명주소']
         ct_loct = ct_loct.to_list()
-        
+
         ct_tel = data['전화번호']
         ct_tel = ct_tel.to_list()
         ct_lat = data['위도']
