@@ -12,7 +12,7 @@ DB_user = 'bigdata'
 DB_pw = 'Bigdata123!!'
 host = '192.168.56.101'
 port = '3306'
-DB_name = 'project1'
+DB_name = 'canteen'
 
 # Create your views here.
 
