@@ -34,11 +34,7 @@ def index(request):
                     'user_name': user_name,
                     'user_loct':user_loct}
         print(context)
-<<<<<<< HEAD
         return render(request,'main.html', context)
-=======
-        return render(request,'index.html', context)
->>>>>>> dce51c0c165a7eff3a75b389be7dce2ed42b62ad
     except:
         users = None
         context = {'map':'map2'}
