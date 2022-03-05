@@ -21,7 +21,11 @@
         </style>
     </head>
 <body>
+<<<<<<< HEAD
     <div id="map" style="width:63em; height: 34em;"></div>
+=======
+    <div id="map" style="width:600px;height:400px;"></div>
+>>>>>>> dce51c0c165a7eff3a75b389be7dce2ed42b62ad
 	<p>
         <button type="button" class="btn btn-outline-success" onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> 
         <button type="button" class="btn btn-outline-warning" onclick="setBounds()">지도 범위 재설정 하기</button> 
@@ -33,6 +37,7 @@
                 center: new kakao.maps.LatLng(35.117006975877224, 129.08991999990096), // 지도의 중심좌표
                 level: 3 // 지도의 확대 레벨
             };
+<<<<<<< HEAD
 
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
         
@@ -181,6 +186,95 @@
             map.panTo(moveLatLon);            
         }
 
+=======
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        
+        // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+        // content:'시설명', latlng:위도, 경도, address:'소재지도로명주소or소재지지번주소', tel:'전화번호'
+        var positions = [
+            {
+                content: '용당캠 산학협력관', 
+				latlng: new kakao.maps.LatLng(35.1167458905612, 129.08949352870223),
+				address: '부산광역시 남구 신선로 365',
+				tel: '☎ 051-629-5215',
+			},
+			{
+				content: '용담캠 한미락식당', 
+				latlng: new kakao.maps.LatLng(35.116822090431576, 129.09262902183374),
+				address: '부산광역시 남구 용당동 251',
+				tel: '☎ 051-629-7518'
+            },
+            {
+				content: '맥도날드 부산동명대DT', 
+				latlng: new kakao.maps.LatLng(35.1231686739599, 129.0995448354368),
+				address: '부산광역시 남구 용당동 신선로 424',
+				tel: '☎ 070-7209-0622'
+            }
+        ];
+        // 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+        var bounds = new  kakao.maps.LatLngBounds();
+        
+        for (var i = 0; i < positions.length; i ++) {
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                // 마커를 표시할 지도
+                map: map, 
+                // 마커의 위치
+                position: positions[i].latlng 
+            });
+            
+            var content = '<div class="wrap">' + 
+                '    <div class="info">' + 
+                '        <div class="title">' + 
+                            positions[i].content + 
+                '            <div class="close" onclick="closeOverlay(overlay)" title="닫기"></div>' + 
+                '        </div>' + 
+                '        <div class="body">' + 
+                '            <div class="desc">' + 
+                '                <div class="ellipsis">'+positions[i].address+'</div>' + 
+                '                <div class="tel">'+positions[i].tel+'</div>' + 
+            '                </div>' + 
+                '        </div>' + 
+                '    </div>' +    
+                '</div>';
+            // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+            kakao.maps.event.addListener(marker, 'click', function() {
+                overlay.setMap(map);
+            });
+            // LatLngBounds 객체에 좌표 추가
+            bounds.extend(positions[i].latlng);
+
+            // 마커 위에 커스텀오버레이를 표시합니다
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: marker.getPosition(),
+                     
+            });
+            
+            
+        }
+        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
+        function closeOverlay(obj) {
+            obj.setMap(null);     
+        }
+        
+        
+        
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        var zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+        function panTo() {
+            // 이동할 위도 경도 위치를 생성합니다 
+            var moveLatLon = new kakao.maps.LatLng(35.11882917309454, 129.09161086107167);
+            // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+            map.panTo(moveLatLon);            
+        }
+
+>>>>>>> dce51c0c165a7eff3a75b389be7dce2ed42b62ad
         function setBounds() {
             // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
             // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
