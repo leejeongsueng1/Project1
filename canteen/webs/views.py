@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from accounts.models import User
 from .loadingContext import *
 
-
 # Create your views here.
 
 
