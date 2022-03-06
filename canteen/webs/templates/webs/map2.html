@@ -10,7 +10,13 @@
 	<link href="{%static 'assets/css/style.css'%}" rel="stylesheet">
 </head>  
 <body>
-
+	<div style=" float: left; ">
+		<p>
+				<button type="button" class="button button1" onclick="panTo()">중심좌표로 이동</button> 
+				<button type="button" class="button button1" onclick="setBounds()">한번에 보기</button> 
+		</p>
+	</div>
+	<div style="float:right " >
 	<form action="/main/map2/" method="get">
 		<div class="dropdown">
 		  <select class="dropdown-button" name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)"  >
@@ -40,16 +46,12 @@
 		</div>
 		<input type="submit" class="btn" value="조회">
 	</form>
+	</div>
 
 
 	<br>
-	<div id="map" style="width:77em; height: 40em;"></div>
-	<div  style="width: 309px; float:right">
-		<p>
-				<button type="button" class="button button1" onclick="panTo()">중심좌표로 이동</button> 
-				<button type="button" class="button button1" onclick="setBounds()">한번에 보기</button> 
-		</p>
-	</div>
+	<div id="map" style="width:100%; height: 550px;"></div>
+	
 
 	
 
@@ -127,7 +129,7 @@
 		// 지도 중심을 부드럽게 이동시키기
 		function panTo() {
 			// 이동할 위도 경도 위치를 생성합니다 
-			var moveLatLon = new kakao.maps.LatLng(35.11882917309454, 129.09161086107167);
+			var moveLatLon = new kakao.maps.LatLng(ct_lat[0], ct_lon[0]);
 			// 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
 			map.panTo(moveLatLon);            
 		}
