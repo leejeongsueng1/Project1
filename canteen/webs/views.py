@@ -6,14 +6,6 @@ from sqlalchemy import create_engine, text
 from django.http import HttpResponse
 from .loadingContext import *
 
-## DB connection
-#Connetion info
-DB_user = 'bigdata2'
-DB_pw = 'Bigdata123!!'
-host = '192.168.56.101'
-port = '3306'
-DB_name = 'project1'
-
 # Create your views here.
 
 

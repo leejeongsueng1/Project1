@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static '/js/custom.js' %}"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>  
+<body>
+	<form action="/main/map2/" method="get" id="form_selector">
+        <div class="dropdown d-inline  ">
+        <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)" style="display: '';"  >
+          <option value="none" hidden>=== 광역시/도 ===</option>
+          <option value="서울특별시">서울특별시</option>
+          <option value="인천광역시">인천광역시</option>
+          <option value="부산광역시">부산광역시</option>
+          <option value="대구광역시">대구광역시</option>
+          <option value="대전광역시">대전광역시</option>
+          <option value="광주광역시">광주광역시</option>
+          <option value="울산광역시">울산광역시</option>
+          <option value="경기도">경기도</option>
+          <option value="강원도">강원도</option>
+          <option value="충청북도">충청북도</option>
+          <option value="충청남도">충청남도</option>
+          <option value="경상북도">경상북도</option>
+          <option value="경상남도">경상남도</option>
+          <option value="전라북도">전라북도</option>
+          <option value="전라남도">전라남도</option>
+          <option value="제주시">제주시</option>
+        </select>
+        </div>
+        <div class="dropdown d-inline">
+        <select name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
+        </div>
+        <input type="submit" class="btn btn-primary" value="조회" id="submitbutton">
+      </form>
+    </div>
+
+	<div id="map" style="width:68em; height: 43em;"></div>
+	<p>
+		
+        <button type="button" class="btn btn-success" onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> 
+        <button type="button" class="btn btn-success" onclick="setBounds()">지도 범위 재설정 하기</button> 
+    </p>
+	
+	
+	<select id="ct_name" style="display: none;">
+		{% for i in ct_name %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_loct" style="display: none;">
+		{% for i in ct_loct %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_tel" style="display: none;">
+		{% for i in ct_tel %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_lat" style="display: none;">
+		{% for i in ct_lat %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_lon" style="display: none;">
+		{% for i in ct_lon %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_info1" style="display: none;">
+		{% for i in ct_info1 %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_info2" style="display: none;">
+		{% for i in ct_info2 %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_info3" style="display: none;">
+		{% for i in ct_info3 %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_info4" style="display: none;">
+		{% for i in ct_info4 %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	<select id="ct_info5" style="display: none;">
+		{% for i in ct_info5 %}
+		<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b981facb932c0551e606c84cec0bf6e"></script>
+	<script>
+		var ct_name = $('#ct_name').find('option').map(function() {return $(this).val();}).get();
+		var ct_loct = $('#ct_loct').find('option').map(function() {return $(this).val();}).get();
+		var ct_tel = $('#ct_tel').find('option').map(function() {return $(this).val();}).get();
+		var ct_lat = $('#ct_lat').find('option').map(function() {return $(this).val();}).get();
+		var ct_lon = $('#ct_lon').find('option').map(function() {return $(this).val();}).get();
+		var ct_info1 = $('#ct_info1').find('option').map(function() {return $(this).val();}).get();
+		var ct_info2 = $('#ct_info2').find('option').map(function() {return $(this).val();}).get();
+		var ct_info3 = $('#ct_info3').find('option').map(function() {return $(this).val();}).get();
+		var ct_info4 = $('#ct_info4').find('option').map(function() {return $(this).val();}).get();
+		var ct_info5 = $('#ct_info5').find('option').map(function() {return $(this).val();}).get();
+		var positions = [];
+
+		for (i=0; i<(ct_name.length); i++){
+			var tmp = {content : ct_name[i],
+						latlng: new kakao.maps.LatLng(ct_lat[i],ct_lon[i]),
+						address: ct_loct[i],
+						tel: ct_tel[i],
+						info: ct_info1[i]+'<br>'+
+								ct_info2[i]+'<br>'+
+								ct_info3[i]+'<br>'+
+								ct_info4[i]+'<br>'+
+								ct_info5[i]+'<br>'}
+			positions.push(tmp);
+			
+		}
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				mapOption = {
+					center: new kakao.maps.LatLng(ct_lat[0], ct_lon[0]), // 지도의 중심좌표
+					level: 3, // 지도의 확대 레벨
+					mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+				}; 
+			// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+        	// content:'시설명', latlng:위도, 경도, address:'소재지도로명주소or소재지지번주소', tel:'전화번호'
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+		
+		// 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+		var bounds = new  kakao.maps.LatLngBounds();
+		for (var i = 0; i < positions.length; i ++) {
+			// 지도에 마커를 생성하고 표시한다
+			var marker = new kakao.maps.Marker({
+				// 마커 표시할 지도
+				map: map, 
+				// 마커가 표시될 위치입니다 
+				position: positions[i].latlng,
+			});
+				// 인포윈도우에 표시할 내용
+			var iwContent = positions[i].info, 
+				// removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+				iwRemoveable = true;
+			// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성
+			// 마커 위에 표시할 인포윈도우를 생성
+			var infowindow = new kakao.maps.InfoWindow({
+				// 인포윈도우에 표출될 내용
+				content : iwContent,
+				removable : iwRemoveable,
+			});
+			// LatLngBounds 객체에 좌표 추가
+			bounds.extend(positions[i].latlng);
+			// 마커에 클릭 이벤트 등록
+			// for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됨
+			kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+		}
+		// 인포윈도우를 표시하는 클로저를 만드는 함수s
+		function makeOverListener(map, marker, infowindow) {
+			return function() {
+				// 인포윈도우를 지도에 표시한다
+				infowindow.open(map, marker);
+			};
+		}
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new kakao.maps.ZoomControl();
+		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+		// 지도 중심을 부드럽게 이동시키기
+		function panTo() {
+			// 이동할 위도 경도 위치를 생성합니다 
+			var moveLatLon = new kakao.maps.LatLng(ct_lat[0], ct_lon[0]);
+			// 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+			map.panTo(moveLatLon);            
+		}
+		function setBounds() {
+			// LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+			// 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+			map.setBounds(bounds);
+		}
+		
+	</script>
+
+	
+
+
+
+
+</body>
+</html>
