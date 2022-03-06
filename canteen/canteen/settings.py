@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'canteen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'project1',
-        'USER' : 'bigdata',
+        'NAME': 'canteen',
+        'USER' : 'bigdata2',
         'PASSWORD' : 'Bigdata123!!',
         'HOST' : '192.168.56.101',
         'PORT' : '3306'

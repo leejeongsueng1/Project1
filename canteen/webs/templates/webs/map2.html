@@ -9,6 +9,7 @@
 	<script src="{% static 'js/custom.js' %}"></script>
 </head>  
 <body>
+
 	<form action="/main/map2/" method="get">
 		<div class="dropdown d-inline  ">
 		  <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)"  >
@@ -40,11 +41,12 @@
 
 
 	<div id="map" style="width:68em; height: 43em;"></div>
+
 	<p>
         <button type="button" class="btn btn-success" onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> 
         <button type="button" class="btn btn-success" onclick="setBounds()">지도 범위 재설정 하기</button> 
     </p>
-	
+
 	
 
 
@@ -215,6 +217,8 @@
 
 	</script>
 {% endif %}
+
+
 
 
 
