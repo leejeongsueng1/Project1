@@ -42,82 +42,35 @@
       <div class="col-lg-2 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
         <div class="info">
         <form action="/main/map2/" method="get" id="form_selector">
-
-          <div class="dropdown d-inline  ">
-          <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)" style = "display: '';"  >
-
-            <option value="none" hidden>=== 광역시/도 ===</option>
-            <option value="서울특별시">서울특별시</option>
-            <option value="인천광역시">인천광역시</option>
-            <option value="부산광역시">부산광역시</option>
-            <option value="대구광역시">대구광역시</option>
-            <option value="대전광역시">대전광역시</option>
-            <option value="광주광역시">광주광역시</option>
-            <option value="울산광역시">울산광역시</option>
-            <option value="경기도">경기도</option>
-            <option value="강원도">강원도</option>
-            <option value="충청북도">충청북도</option>
-            <option value="충청남도">충청남도</option>
-            <option value="경상북도">경상북도</option>
-            <option value="경상남도">경상남도</option>
-            <option value="전라북도">전라북도</option>
-            <option value="전라남도">전라남도</option>
-            <option value="제주시">제주시</option>
+          <div class="dropdown">
+            <select class="dropdown-button" name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)" style = "display: '';"  >
+              <div class="dropdown-content">
+                <option value="none" hidden>== 광역시/도 ==</option>
+                <option value="인천광역시">인천광역시</option>
+                <option value="서울특별시">서울특별시</option>
+                <option value="부산광역시">부산광역시</option>
+                <option value="대구광역시">대구광역시</option>
+                <option value="대전광역시">대전광역시</option>
+                <option value="광주광역시">광주광역시</option>
+                <option value="울산광역시">울산광역시</option>
+                <option value="경기도">경기도</option>
+                <option value="강원도">강원도</option>
+                <option value="충청북도">충청북도</option>
+                <option value="충청남도">충청남도</option>
+                <option value="경상북도">경상북도</option>
+                <option value="경상남도">경상남도</option>
+                <option value="전라북도">전라북도</option>
+                <option value="전라남도">전라남도</option>
+                <option value="제주시">제주시</option>
+              </div>
           </select>
+          <br>
           </div>
-          <!--test-->
-          <div id="navbar" class="navbar">
-            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
-            </li>
+          
+          <div class="dropdown">
+          <select class="dropdown-button" name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
           </div>
-            <!--test-->
-            <!--test-->
-          <div id="navbar" class="navbar">
-            <li class="dropdown">
-              <i class="bi bi-chevron-down"><select name="user_loct_state" id="user_loct_state"onchange="set_loct_city(this)" style="display: '';"  ><span>광역시/도</span></select></i></a>
-              <ul>
-                  <li><option value="none" hidden>=== 광역시/도 ===</option></li>
-                  <li><option value="서울특별시">서울특별시</option></li>
-                  <li><option value="인천광역시">인천광역시</option></li>
-                  <li><option value="부산광역시">부산광역시</option></li>
-                  <li><option value="대구광역시">대구광역시</option></li>
-                  <li><option value="대전광역시">대전광역시</option></li>
-                  <li><option value="광주광역시">광주광역시</option></li>
-                  <li><option value="울산광역시">울산광역시</option></li>
-                  <li><option value="경기도">경기도</option></li>
-                  <li><option value="강원도">강원도</option></li>
-                  <li><option value="충청북도">충청북도</option></li>
-                  <li><option value="충청남도">충청남도</option></li>
-                  <li><option value="경상북도">경상북도</option></li>
-                  <li><option value="경상남도">경상남도</option></li>
-                  <li><option value="전라북도">전라북도</option></li>
-                  <li><option value="전라남도">전라남도</option></li>
-                  <li></li><option value="제주시">제주시</option></li>
-                </select>
-              </ul>
-            </li>
-          </div>
-            <!--test-->
-            
-          <div class="dropdown d-inline">
-          <select name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
-          </div>
-          <input type="submit" class="btn btn-primary" value="조회" id="submitbutton">
+          <input type="submit" class="btn btn-second" value="조회" id="submitbutton">
         </form>
       </div>
 
@@ -261,7 +214,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/love.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
@@ -276,7 +229,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/canteen.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
@@ -304,7 +257,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/pla_can.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
@@ -346,7 +299,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/gra_can.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
