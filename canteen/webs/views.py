@@ -1,9 +1,5 @@
 from django.shortcuts import render, redirect
 from accounts.models import User
-import pymysql
-import pandas as pd
-from sqlalchemy import create_engine, text
-from django.http import HttpResponse
 from .loadingContext import *
 
 
