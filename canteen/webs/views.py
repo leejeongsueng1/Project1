@@ -8,11 +8,11 @@ from django.http import HttpResponse
 
 ## DB connection
 #Connetion info
-DB_user = 'bigdata'
+DB_user = 'bigdata2'
 DB_pw = 'Bigdata123!!'
 host = '192.168.56.101'
 port = '3306'
-DB_name = 'project1'
+DB_name = 'canteen'
 
 # Create your views here.
 
@@ -34,11 +34,7 @@ def index(request):
                     'user_name': user_name,
                     'user_loct':user_loct}
         print(context)
-<<<<<<< HEAD
         return render(request,'main.html', context)
-=======
-        return render(request,'index.html', context)
->>>>>>> dce51c0c165a7eff3a75b389be7dce2ed42b62ad
     except:
         users = None
         context = {'map':'map2'}
