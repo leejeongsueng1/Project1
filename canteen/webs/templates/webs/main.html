@@ -27,54 +27,18 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Contact us the get started</p>
+      <h2>급식소 찾기</h2>
+      <p>지역을 선택해서 주변 급식소를 빠르게 찾아보세요.</p>
     </div>
 
     <div class="row">
 
-      <div class="col-lg-10 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex align-items-stretch" style="height: 840px;" data-aos="fade-up" data-aos-delay="100">
         <div class="info">
-          <iframe src="/main/{{map}}" frameborder="0"height="600px" width="1030px" data-aos="zoom-in"></iframe>
-        </div>
+          <iframe src="/main/{{map}}" frameborder="0"height="100%" width="100%" data-aos="zoom-in"></iframe>
+        </div><!--h800, w1250-->
 
       </div>
-      <div class="col-lg-2 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-        <div class="info">
-        <form action="/main/map2/" method="get" id="form_selector">
-          <div class="dropdown">
-            <select class="dropdown-button" name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)" style = "display: '';"  >
-              <div class="dropdown-content">
-                <option value="none" hidden>== 광역시/도 ==</option>
-                <option value="인천광역시">인천광역시</option>
-                <option value="서울특별시">서울특별시</option>
-                <option value="부산광역시">부산광역시</option>
-                <option value="대구광역시">대구광역시</option>
-                <option value="대전광역시">대전광역시</option>
-                <option value="광주광역시">광주광역시</option>
-                <option value="울산광역시">울산광역시</option>
-                <option value="경기도">경기도</option>
-                <option value="강원도">강원도</option>
-                <option value="충청북도">충청북도</option>
-                <option value="충청남도">충청남도</option>
-                <option value="경상북도">경상북도</option>
-                <option value="경상남도">경상남도</option>
-                <option value="전라북도">전라북도</option>
-                <option value="전라남도">전라남도</option>
-                <option value="제주시">제주시</option>
-              </div>
-          </select>
-          <br>
-          </div>
-          
-          <div class="dropdown">
-          <select class="dropdown-button" name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
-          </div>
-          <input type="submit" class="btn btn-second" value="조회" id="submitbutton">
-        </form>
-      </div>
-
-    </div>
 
   </div>
   </div>
@@ -134,7 +98,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/grandmother.png'%}" style="width: 65px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/grandmother.png'%}" style="width: 65px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">노인</a></h4>
               <p class="description">단순히 식사 제공에 그치는 것이 아니라 고령자의 안부 확인, 고독의 완화, 인간적인 교류 등 부차적인 효과를 발생시킨다.</p>
@@ -143,7 +107,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/daughter.png'%}" style="width: 70px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/daughter.png'%}" style="width: 70px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">결식아동</a></h4>
               <p class="description">보호자가 근로, 질병·장애 등의 사유로 주식과 부식을 준비하기 어렵거나, 아동 스스로 식사를 차려 먹기 어려운 경우</p>
@@ -152,7 +116,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/help.png'%}" style="width: 65px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/help.png'%}" style="width: 65px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">노숙인</a></h4>
               <p class="description">노숙인 지역사회 복귀를 위한 일자리 연계, 신용회복, 의류·물품 지원 및 상담 등 중장기적인 지원도 함께 제공하려 노력중이다.</p>
@@ -202,7 +166,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/tab_can.jpg'%}" class="img-fluid" alt="">
+              <img src="{%static 'assets/img/portfolio/can1.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="{%static 'assets/img/portfolio/portfolio-2.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -228,52 +192,9 @@
             </div>
           </div>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/canteen.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-5.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/volun.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-6.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/pla_can.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-4.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/portfolio-9.jpg'%}" class="img-fluid" alt="">
+              <img src="{%static 'assets/img/portfolio/can4.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="{%static 'assets/img/portfolio/portfolio-9.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -281,20 +202,6 @@
               <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/love_can.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-7.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
               </div>
             </div>
           </div>
@@ -313,6 +220,65 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/canteen.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{%static 'assets/img/portfolio/portfolio-5.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/can2.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{%static 'assets/img/portfolio/portfolio-6.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/can3.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{%static 'assets/img/portfolio/portfolio-4.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/love_can.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{%static 'assets/img/portfolio/portfolio-7.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+
         </div>
 
       </div>
@@ -324,16 +290,16 @@
 
         <div class="section-title">
           <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
+          <p>자주 하는 질문</p>
         </div>
 
         <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
 
           <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Q. 로그인시 지도는 어떻게 표시되나요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                A. 회원가입 시 기입한 주소지의 주요시설을 지도 기준점으로 설정하고 화면 표시합니다.
               </p>
             </div>
           </li>
