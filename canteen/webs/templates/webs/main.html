@@ -42,8 +42,10 @@
       <div class="col-lg-2 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
         <div class="info">
         <form action="/main/map2/" method="get" id="form_selector">
-          <div class="dropdown d-inline">
-          <select name="user_loct_state" id="user_loct_state"onchange="set_loct_city(this)" style="display: '';"  >
+
+          <div class="dropdown d-inline  ">
+          <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)" style = "display: '';"  >
+
             <option value="none" hidden>=== 광역시/도 ===</option>
             <option value="서울특별시">서울특별시</option>
             <option value="인천광역시">인천광역시</option>
@@ -135,20 +137,21 @@
             <img src="{%static 'assets/img/about-img.svg'%}" class="img-fluid" alt="" data-aos="zoom-in">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
-            <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
+            <h3 data-aos="fade-up">내가 사는 곳의 급식소를 찾아보세요.</h3>
             <p data-aos="fade-up" data-aos-delay="100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              원하는 지역을 선택하시면 저희가 찾아드릴게요<br>
+              저희는 이런 사람들을 목표로 합니다.
             </p>
             <div class="row">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-receipt"></i>
-                <h4>Corporis voluptates sit</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h4>결식할 우려가 있는 60세 이상 어르신</h4>
+                <p>내가 사는 지역을 등록하고 주변 급식소를 빠르게 찾으세요.</p>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-cube-alt"></i>
-                <h4>Ullamco laboris nisi</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h4>요양 서비스를 제공하는 복지센터</h4>
+                <p>센터의 주소를 등록하고 주변 급식소 정보를 받아보세요.</p>
               </div>
             </div>
           </div>
