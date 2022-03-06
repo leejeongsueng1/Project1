@@ -12,7 +12,7 @@ from django.http import HttpResponse
 def load_db_connection():
     ## DB connection
     #Connetion info
-    DB_user = 'bigdata2'
+    DB_user = 'bigdata'
     DB_pw = 'Bigdata123!!'
     host = '192.168.56.101'
     port = '3306'

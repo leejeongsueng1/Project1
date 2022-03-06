@@ -9,6 +9,7 @@ import plotly.express as px
 
 
 def load_graph_data():
+    conn = load_db_connection()
     df = pd.read_sql('select * from canteenu', conn)
     df_statis = df.copy()
     df_statis = df_statis[['소재지도로명주소']]
