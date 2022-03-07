@@ -142,7 +142,8 @@
 								ct_info2[i]+'<br>'+
 								ct_info3[i]+'<br>'+
 								ct_info4[i]+'<br>'+
-								ct_info5[i]+'<br>'}
+								ct_info5[i]+'<br>'
+							}
 			positions.push(tmp);
 			
 		}
@@ -168,7 +169,7 @@
                 position: positions[i].latlng 
             });
 				// 인포윈도우에 표시할 내용
-			var iwContent = '<span class="info-address">'+positions[i].content+'<br>'+positions[i].address+'<br>'+positions[i].tel+ '<br>' +positions.info + '</span>'
+			var iwContent = '<span class="info-address">'+positions[i].content+'<br>'+positions[i].address+'<br>'+positions[i].tel+ '</span>'
             
 				// removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 				iwRemoveable = true;

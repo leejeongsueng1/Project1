@@ -1213,7 +1213,7 @@ option:hover{background-color:yellow;}
 #submitbutton { background-color: #F39E7A; }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #F39E7A;  
   border: none;
   color: white;
   padding: 8px 16px;
@@ -1239,3 +1239,4 @@ option:hover{background-color:yellow;}
   border: 2px solid #F39E7A;
 
 }
+.btn {font-family: 'InfinitySans-RegularA1', serif }
