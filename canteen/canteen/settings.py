@@ -87,7 +87,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'project1',
-        'USER' : 'bigdata',
+        'USER' : 'bigdata2',
         'PASSWORD' : 'Bigdata123!!',
         'HOST' : '127.0.0.1',
         'PORT' : '3306'
