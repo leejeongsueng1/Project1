@@ -26,7 +26,7 @@ def signup(request):
         user_password2 = request.POST.get('password2')
         user_loct_state = request.POST.get('user_loct_state')
         user_loct_city = request.POST.get('user_loct_city')
-        user_cert = request.POST.get('user_cert')
+        user_cert = ''
 
         res_data = {}
 
@@ -35,7 +35,7 @@ def signup(request):
         # 비밀번호1 과 비밀번호2가 일치하지 않으면 에러를 발생시키고 화면에 렌더링
         # 모든값이 입력되고 비밀번호가 일치하면 저장하고 모델에 입력후 save
 
-        if not (user_id and user_name and user_password1 and user_password2 and user_cert):
+        if not (user_id and user_name and user_password1 and user_password2):
             res_data['error'] = '모든 값을 입력해야합니다.'
             return render(request,'accounts/signup.html', res_data)
         elif user_password1 != user_password2:

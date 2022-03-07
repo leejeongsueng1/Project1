@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from accounts.models import User
 from .loadingContext import *
+from .graph import *
 
 # Create your views here.
 
@@ -76,4 +77,17 @@ def dashboard(request):
     else:
         return render(request,'dashboard.html')
 
+
+def graph(request):
+    user_data = check_sessions(request)
+    try:
+        loct = user_data['user_loct']
+        
+
+        #DB연결
+        draw_graph(loct)
+        
+        return render(request,'graph.html',data)
+    except:
+        return render(request,'graph.html')
     
