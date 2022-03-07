@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'project1',
         'USER' : 'bigdata',
         'PASSWORD' : 'Bigdata123!!',
-        'HOST' : '192.168.56.101',
+        'HOST' : '127.0.0.1',
         'PORT' : '3306'
     }
 }
