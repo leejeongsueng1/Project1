@@ -119,33 +119,38 @@ def mypage(request):
         user_data = check_sessions(request)
         context['map'] = user_data['map']
         context['user_id'] = user_data['user_id']
-        context['session_key'] = user_data['session_id']
+        context['session_key'] = user_data['session_key']
         context['user_name'] = user_data['user_name']
         context['user_loct'] = user_data['user_loct']
 
         if request.POST.get('change'):
             for u in users:
                 real_password = u.user_pw
-            password1 = requst.POST.get('password1')
-            newpassword = requst.POST.get('newpassword')
-            newpassword2 = requst.POST.get('newpassword2')
-            if password1 == real_password:
-                if newpassword == newpassword2:
-                    user.user_pw = newpassword2
-                    user.save()
+                password1 = request.POST.get('password1')
+                newpassword = request.POST.get('newpassword')
+                newpassword2 = request.POST.get('newpassword2')
+                if check_password(password1,real_password):
+                    if newpassword == newpassword2:
+                        u.user_pw = make_password(newpassword2)
+                        u.save()
+                        del(request.session['user'])
+                        request.session.flush()
+                        return redirect('/main/')
+                    else:
+                        context['error'] = '변경할 비밀번호가 서로 다릅니다.'
+                        return render(request, 'accounts/mypage.html',context)
                 else:
-                    context['error'] = '변경할 비밀번호가 서로 다릅니다.'
+                    context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
                     return render(request, 'accounts/mypage.html',context)
-            else:
-                context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
-                return render(request, 'accounts/mypage.html',context)
         if request.POST.get('delete'):
             for u in users:
                 real_password = u.user_pw
-            password1 = requst.POST.get('password1')
-            if password1 == real_password:
-                user.delete()
-                return redirect('/main')
+            password1 = request.POST.get('password1')
+            if check_password(password1,real_password):
+                users.delete()
+                del(request.session['user'])
+                request.session.flush()
+                return redirect('/main/')
             else:
                 context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
                 return render(request, 'accounts/mypage.html',context)

@@ -50,9 +50,12 @@ def map2(request):
 
         #DB연결
         conn = load_db_connection()
-        data = load_data(stmt,conn)
-        
-        return render(request,'map.html',data)
+        if load_data(stmt,conn):
+            data = load_data(stmt,conn)
+            
+            return render(request,'map.html',data)
+        else:
+            return render(request,'map2.html')
     except:
         return render(request,'map2.html')
         
@@ -81,13 +84,34 @@ def dashboard(request):
 def graph(request):
     user_data = check_sessions(request)
     try:
-        loct = user_data['user_loct']
+        print(request)
+        state = request.GET.get('user_loct_state')
+        print('A')
+        print(state)
+        city = request.GET.get('user_loct_city')
+        print('B')
+        print(city)
+        loct = state + ' ' + city
+        print('C')
+        draw_graph(loct)
+        print('D')
+        return render(request,'graph.html')
+    except:
+        try:
+            print('E')
+            loct = user_data['user_loct']
+            print('F')
+            #DB연결
+            draw_graph(loct)
+            print('G')
+            return render(request,'graph.html')
+        except:
+            print('H')
+            loct = "서울특별시 금천구"
+            draw_graph(loct)
+            return render(request,'graph.html')
+
+ 
         
 
-        #DB연결
-        draw_graph(loct)
-        
-        return render(request,'graph.html',data)
-    except:
-        return render(request,'graph.html')
     

@@ -15,7 +15,7 @@ class User(models.Model):
     user_id = models.CharField(max_length=30, verbose_name='유저 아이디')
     user_pw = models.CharField(max_length=128, verbose_name='유저 비밀번호')
     user_name = models.CharField(max_length=15, verbose_name='유저 이름')
-    user_cert = models.CharField(max_length=12, unique=True, verbose_name='유저 관리번호' )
+    user_cert = models.CharField(max_length=12,  verbose_name='유저 관리번호' )
     user_loct = models.CharField(max_length=15, verbose_name='유저 주소')
     
     

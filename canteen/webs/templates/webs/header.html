@@ -34,12 +34,13 @@
             </ul>
           </li> -->
             {% if user_name %}
-                <li><a class="nav-link scrollto" href="#contact">안녕하세요 {{ user_name }}님!&nbsp&nbsp&nbsp</a></li>
+                <li><a class="nav-link scrollto">안녕하세요 {{ user_name }}님!&nbsp&nbsp&nbsp</a></li>
+                <li class="nav-link scrollto" id="mypage" style="display: '';"><a class="nav-link" href="/main/accounts/mypage">마이페이지</a></li>
             {% endif %}
             <li class="nav-link scrollto" id="signin" style="display: '';"><a class="nav-link" href="/main/accounts/login/">로그인</a></li>
             <li class="nav-link scrollto" id="signout" style="display: none;"><a class="nav-link" href="/main/accounts/logout/">로그아웃</a></li>
             <li class="nav-link scrollto" id="signup" style="display: '';"><a class="nav-link" href="/main/accounts/signup">회원가입</a></li>
-            <li class="nav-link scrollto" id="mypage" style="display: none;"><a class="nav-link" href="/main/accounts/mypage">마이페이지</a></li>
+            
             <li><a class="getstarted scrollto" href="#contact">시작하기</a></li>
             
         </ul>
