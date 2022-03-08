@@ -99,6 +99,59 @@ def logout(request):
     return redirect('/main')
 
 
+def mypage(request):
+    # 맨처음 화면로드시 GET방식으로 통신
+    if request.method == 'GET':
+        #이미 로그인이 되어있는지 확인
+        user_data = check_sessions(request)
+
+        if user_data:
+            return render(request,'accounts/mypage.html', user_data)
+        else:
+            return render(request,'accounts/no_user.html')
+
+    # POST방식으로 
+    elif request.method == 'POST':
+        # POST.get으로 가져오면 값이 없을경우 None을 저장해줌
+        user_id = request.session.get('user')
+        users = User.objects.filter(user_id = user_id)
+        context={}
+        user_data = check_sessions(request)
+        context['map'] = user_data['map']
+        context['user_id'] = user_data['user_id']
+        context['session_key'] = user_data['session_id']
+        context['user_name'] = user_data['user_name']
+        context['user_loct'] = user_data['user_loct']
+
+        if request.POST.get('change'):
+            for u in users:
+                real_password = u.user_pw
+            password1 = requst.POST.get('password1')
+            newpassword = requst.POST.get('newpassword')
+            newpassword2 = requst.POST.get('newpassword2')
+            if password1 == real_password:
+                if newpassword == newpassword2:
+                    user.user_pw = newpassword2
+                    user.save()
+                else:
+                    context['error'] = '변경할 비밀번호가 서로 다릅니다.'
+                    return render(request, 'accounts/mypage.html',context)
+            else:
+                context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
+                return render(request, 'accounts/mypage.html',context)
+        if request.POST.get('delete'):
+            for u in users:
+                real_password = u.user_pw
+            password1 = requst.POST.get('password1')
+            if password1 == real_password:
+                user.delete()
+                return redirect('/main')
+            else:
+                context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
+                return render(request, 'accounts/mypage.html',context)
+
+
+
 
 
 

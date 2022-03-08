@@ -7,6 +7,8 @@ function logined(){
     target3.style.display = 'none';
     target = document.getElementById('signout');
     target.style.display = '';
+    target4 = document.getElementById('mypage');
+    target4.style.display= '';
 }
 
 function not_logined(){
@@ -16,6 +18,8 @@ function not_logined(){
     target2.style.display = '';
     target3 = document.getElementById('signup');
     target3.style.display = '';
+    target4 = document.getElementById('mypage');
+    target4.style.display= 'none';
 
 }
 

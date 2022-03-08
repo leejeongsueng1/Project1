@@ -1,0 +1,418 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[07/Mar/2022 23:18:05] "GET /main/ HTTP/1.1" 200 30121
+[07/Mar/2022 23:18:06] "GET /main/map/ HTTP/1.1" 200 12915
+[07/Mar/2022 23:18:06] "GET /static/js/custom.js HTTP/1.1" 304 0
+/root/project1/Project1/canteen/webs/graph.py:29: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_draw[f'{loc_name} 개수'] = 1
+[07/Mar/2022 23:18:10] "GET /main/accounts/logout/ HTTP/1.1" 302 0
+[07/Mar/2022 23:18:10] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:18:11] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:18:12] "GET /main/graph HTTP/1.1" 200 3674260
+Error when invoking the open external command: Error in response: Unable to parse response as JSON: 
+[07/Mar/2022 23:19:03] "GET /main/accounts/login/ HTTP/1.1" 200 9900
+[07/Mar/2022 23:19:35] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:19:35] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:19:35] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:19:35] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:19:36] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:20:39] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:20:39] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:20:39] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:20:42] "GET /main/accounts/signup/ HTTP/1.1" 200 16810
+[07/Mar/2022 23:20:44] "GET /main/accounts/login/ HTTP/1.1" 200 9900
+[07/Mar/2022 23:20:47] "GET /main/accounts/mypage/ HTTP/1.1" 200 9232
+[07/Mar/2022 23:20:50] "GET /main/accounts/signup/ HTTP/1.1" 200 16810
+[07/Mar/2022 23:20:51] "GET /main/accounts/mypage/ HTTP/1.1" 200 9232
+[07/Mar/2022 23:20:53] "GET /main/accounts/signup/ HTTP/1.1" 200 16810
+[07/Mar/2022 23:20:53] "GET /main/accounts/login/ HTTP/1.1" 200 9900
+[07/Mar/2022 23:20:56] "POST /main/accounts/login/ HTTP/1.1" 302 0
+[07/Mar/2022 23:20:56] "GET /main HTTP/1.1" 301 0
+[07/Mar/2022 23:20:56] "GET /main/ HTTP/1.1" 200 30121
+/root/project1/Project1/canteen/webs/graph.py:29: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+[07/Mar/2022 23:20:56] "GET /main/map/ HTTP/1.1" 200 12915
+Unable to connect to VS Code server: Error in request.
+Error: connect ENOENT /run/user/0/vscode-ipc-682b8960-1eba-417d-b733-ba14c96414bc.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1146:16) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'connect',
+  address: '/run/user/0/vscode-ipc-682b8960-1eba-417d-b733-ba14c96414bc.sock'
+}
+[07/Mar/2022 23:20:57] "GET /main/accounts/mypage/ HTTP/1.1" 200 11009
+[07/Mar/2022 23:50:16] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:50:16] "GET /static/assets/vendor/aos/aos.css HTTP/1.1" 200 26053
+[07/Mar/2022 23:50:16] "GET /static/assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 200 13785
+[07/Mar/2022 23:50:16] "GET /static/assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 200 15563
+[07/Mar/2022 23:50:17] "GET /static/assets/css/style.css HTTP/1.1" 200 25284
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 200 73271
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/boxicons/css/boxicons.min.css HTTP/1.1" 200 63781
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 163873
+[07/Mar/2022 23:50:17] "GET /main/map2 HTTP/1.1" 301 0
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/aos/aos.js HTTP/1.1" 200 14690
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 200 56222
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78129
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 200 35445
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/php-email-form/validate.js HTTP/1.1" 200 2731
+[07/Mar/2022 23:50:17] "GET /static/assets/js/main.js HTTP/1.1" 200 5858
+[07/Mar/2022 23:50:17] "GET /static/assets/js/custom.js HTTP/1.1" 200 5264
+[07/Mar/2022 23:50:17] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 200 135617
+[07/Mar/2022 23:50:17] "GET /static/img/spoon-and-fork.png HTTP/1.1" 200 21387
+[07/Mar/2022 23:50:17] "GET /static/assets/img/about-img.svg HTTP/1.1" 200 30700
+[07/Mar/2022 23:50:17] "GET /static/img/service1/canteen.png HTTP/1.1" 200 7378
+[07/Mar/2022 23:50:17] "GET /static/js/custom.js HTTP/1.1" 200 5428
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345 HTTP/1.1" 200 92004
+[07/Mar/2022 23:50:17] "GET /static/img/service1/grandmother.png HTTP/1.1" 200 77252
+[07/Mar/2022 23:50:17] "GET /static/img/service1/daughter.png HTTP/1.1" 200 61274
+[07/Mar/2022 23:50:17] "GET /static/assets/vendor/boxicons/fonts/boxicons.woff2 HTTP/1.1" 200 102988
+[07/Mar/2022 23:50:17] "GET /static/img/service1/help.png HTTP/1.1" 200 63980
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/vol_can.jpg HTTP/1.1" 200 84039
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/can1.jpg HTTP/1.1" 200 67571
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/love.jpg HTTP/1.1" 200 19863
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/can4.jpg HTTP/1.1" 200 91685
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/gra_can.jpg HTTP/1.1" 200 87272
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/canteen.jpg HTTP/1.1" 200 71149
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/love_can.jpg HTTP/1.1" 200 76814
+[07/Mar/2022 23:50:17] "GET /static/assets/img/team/2.jpg HTTP/1.1" 200 59118
+[07/Mar/2022 23:50:17] "GET /static/assets/img/portfolio/can3.jpg HTTP/1.1" 200 124758
+[07/Mar/2022 23:50:17] "GET /static/assets/img/team/1.png HTTP/1.1" 200 335617
+[07/Mar/2022 23:50:18] "GET /static/assets/img/team/3.jpg HTTP/1.1" 200 50436
+[07/Mar/2022 23:50:18] "GET /static/assets/img/team/4.jpg HTTP/1.1" 200 58070
+[07/Mar/2022 23:50:18] "GET /static/img/sister/Senior_Citizens_Association.jpg HTTP/1.1" 200 213271
+[07/Mar/2022 23:50:18] "GET /static/assets/img/team/5.jpg HTTP/1.1" 200 63049
+[07/Mar/2022 23:50:18] "GET /static/img/sister/long_term_care.png HTTP/1.1" 200 78628
+[07/Mar/2022 23:50:18] "GET /static/img/sister/1004.png HTTP/1.1" 200 16185
+[07/Mar/2022 23:50:18] "GET /static/img/sister/labor_development.png HTTP/1.1" 200 343074
+[07/Mar/2022 23:50:18] "GET /static/assets/img/portfolio/can5.png HTTP/1.1" 200 796371
+[07/Mar/2022 23:50:18] "GET /static/img/sister/welfare_center.png HTTP/1.1" 200 8229
+[07/Mar/2022 23:50:18] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:50:19] "GET /static/assets/img/favicon.png HTTP/1.1" 200 34607
+[07/Mar/2022 23:50:28] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:50:31] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/aos/aos.css HTTP/1.1" 200 26053
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 200 13785
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 200 73271
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/boxicons/css/boxicons.min.css HTTP/1.1" 200 63781
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 200 15563
+[07/Mar/2022 23:50:31] "GET /main/map2 HTTP/1.1" 301 0
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 163873
+[07/Mar/2022 23:50:31] "GET /static/assets/css/style.css HTTP/1.1" 200 25284
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/aos/aos.js HTTP/1.1" 200 14690
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78129
+[07/Mar/2022 23:50:31] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 200 35445
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 200 56222
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 200 135617
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/php-email-form/validate.js HTTP/1.1" 200 2731
+[07/Mar/2022 23:50:31] "GET /static/assets/js/main.js HTTP/1.1" 200 5858
+[07/Mar/2022 23:50:31] "GET /static/js/custom.js HTTP/1.1" 200 5428
+[07/Mar/2022 23:50:31] "GET /static/assets/js/custom.js HTTP/1.1" 200 5264
+[07/Mar/2022 23:50:31] "GET /static/img/spoon-and-fork.png HTTP/1.1" 200 21387
+[07/Mar/2022 23:50:31] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:50:31] "GET /static/assets/img/about-img.svg HTTP/1.1" 200 30700
+[07/Mar/2022 23:50:31] "GET /static/img/service1/canteen.png HTTP/1.1" 200 7378
+[07/Mar/2022 23:50:31] "GET /static/img/service1/grandmother.png HTTP/1.1" 200 77252
+[07/Mar/2022 23:50:31] "GET /static/img/service1/daughter.png HTTP/1.1" 200 61274
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/boxicons/fonts/boxicons.woff2 HTTP/1.1" 200 102988
+[07/Mar/2022 23:50:31] "GET /static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345 HTTP/1.1" 200 92004
+[07/Mar/2022 23:50:31] "GET /static/img/service1/help.png HTTP/1.1" 200 63980
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/vol_can.jpg HTTP/1.1" 200 84039
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/can1.jpg HTTP/1.1" 200 67571
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/love.jpg HTTP/1.1" 200 19863
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/can4.jpg HTTP/1.1" 200 91685
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/gra_can.jpg HTTP/1.1" 200 87272
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/canteen.jpg HTTP/1.1" 200 71149
+[07/Mar/2022 23:50:31] "GET /static/assets/img/portfolio/can5.png HTTP/1.1" 200 796371
+[07/Mar/2022 23:50:32] "GET /static/assets/img/portfolio/love_can.jpg HTTP/1.1" 200 76814
+[07/Mar/2022 23:50:32] "GET /static/assets/img/portfolio/can3.jpg HTTP/1.1" 200 124758
+[07/Mar/2022 23:50:32] "GET /static/assets/img/team/2.jpg HTTP/1.1" 200 59118
+[07/Mar/2022 23:50:32] "GET /static/assets/img/team/1.png HTTP/1.1" 200 335617
+[07/Mar/2022 23:50:32] "GET /static/assets/img/team/3.jpg HTTP/1.1" 200 50436
+[07/Mar/2022 23:50:32] "GET /static/assets/img/team/4.jpg HTTP/1.1" 200 58070
+[07/Mar/2022 23:50:32] "GET /static/assets/img/team/5.jpg HTTP/1.1" 200 63049
+[07/Mar/2022 23:50:32] "GET /static/img/sister/Senior_Citizens_Association.jpg HTTP/1.1" 200 213271
+[07/Mar/2022 23:50:32] "GET /static/img/sister/long_term_care.png HTTP/1.1" 200 78628
+[07/Mar/2022 23:50:32] "GET /static/img/sister/welfare_center.png HTTP/1.1" 200 8229
+[07/Mar/2022 23:50:32] "GET /static/img/sister/1004.png HTTP/1.1" 200 16185
+[07/Mar/2022 23:50:32] "GET /static/img/sister/labor_development.png HTTP/1.1" 200 343074
+[07/Mar/2022 23:50:34] "GET /main/map2/?user_loct_state=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C&user_loct_city=%EC%9A%B8%EC%A3%BC%EA%B5%B0 HTTP/1.1" 200 13591
+[07/Mar/2022 23:50:44] "GET /main/map2/?user_loct_state=%EA%B0%95%EC%9B%90%EB%8F%84&user_loct_city=%EC%9B%90%EC%A3%BC%EC%8B%9C HTTP/1.1" 200 13151
+[07/Mar/2022 23:50:54] "GET /main/map2/?user_loct_state=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84&user_loct_city=%ED%95%98%EB%8F%99%EA%B5%B0 HTTP/1.1" 200 8963
+[07/Mar/2022 23:54:04] "GET /main/map2/?user_loct_state=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84&user_loct_city=%ED%95%98%EB%8F%99%EA%B5%B0 HTTP/1.1" 200 8963
+[07/Mar/2022 23:54:07] "GET /main/map2/?user_loct_state=none HTTP/1.1" 200 5931
+[07/Mar/2022 23:54:13] "GET /main/map2/?user_loct_state=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84&user_loct_city=%ED%95%98%EB%8F%99%EA%B5%B0 HTTP/1.1" 200 8963
+[07/Mar/2022 23:56:00] "GET /main/map2/?user_loct_state=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84&user_loct_city=%ED%95%98%EB%8F%99%EA%B5%B0 HTTP/1.1" 200 8963
+[07/Mar/2022 23:56:06] "GET /main/map2/?user_loct_state=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C&user_loct_city=%EB%8F%99%EA%B5%AC HTTP/1.1" 200 11255
+[07/Mar/2022 23:56:14] "GET /main/map2/?user_loct_state=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84&user_loct_city=%ED%95%98%EB%8F%99%EA%B5%B0 HTTP/1.1" 200 8963
+[07/Mar/2022 23:56:27] "GET /main/map2/?user_loct_state=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C&user_loct_city=%EB%82%A8%EA%B5%AC HTTP/1.1" 200 11539
+[07/Mar/2022 23:57:08] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/aos/aos.css HTTP/1.1" 200 26053
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 200 13785
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 200 15563
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 200 73271
+[07/Mar/2022 23:57:08] "GET /static/assets/css/style.css HTTP/1.1" 200 25284
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/boxicons/css/boxicons.min.css HTTP/1.1" 200 63781
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 163873
+[07/Mar/2022 23:57:08] "GET /main/map2 HTTP/1.1" 301 0
+[07/Mar/2022 23:57:08] "GET /static/img/spoon-and-fork.png HTTP/1.1" 200 21387
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/aos/aos.js HTTP/1.1" 200 14690
+[07/Mar/2022 23:57:08] "GET /static/assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 200 56222
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78129
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 200 35445
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/php-email-form/validate.js HTTP/1.1" 200 2731
+[07/Mar/2022 23:57:09] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 200 135617
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345 HTTP/1.1" 200 92004
+[07/Mar/2022 23:57:09] "GET /static/js/custom.js HTTP/1.1" 200 5428
+[07/Mar/2022 23:57:09] "GET /static/assets/js/main.js HTTP/1.1" 200 5858
+[07/Mar/2022 23:57:09] "GET /static/assets/vendor/boxicons/fonts/boxicons.woff2 HTTP/1.1" 200 102988
+[07/Mar/2022 23:57:09] "GET /static/assets/js/custom.js HTTP/1.1" 200 5264
+[07/Mar/2022 23:57:09] "GET /static/img/service1/canteen.png HTTP/1.1" 200 7378
+[07/Mar/2022 23:57:09] "GET /static/assets/img/about-img.svg HTTP/1.1" 200 30700
+[07/Mar/2022 23:57:09] "GET /static/img/service1/grandmother.png HTTP/1.1" 200 77252
+[07/Mar/2022 23:57:09] "GET /static/img/service1/daughter.png HTTP/1.1" 200 61274
+[07/Mar/2022 23:57:09] "GET /static/img/service1/help.png HTTP/1.1" 200 63980
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/vol_can.jpg HTTP/1.1" 200 84039
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/can1.jpg HTTP/1.1" 200 67571
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/love.jpg HTTP/1.1" 200 19863
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/can4.jpg HTTP/1.1" 200 91685
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/gra_can.jpg HTTP/1.1" 200 87272
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/canteen.jpg HTTP/1.1" 200 71149
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/love_can.jpg HTTP/1.1" 200 76814
+[07/Mar/2022 23:57:09] "GET /static/assets/img/team/2.jpg HTTP/1.1" 200 59118
+[07/Mar/2022 23:57:09] "GET /static/assets/img/portfolio/can3.jpg HTTP/1.1" 200 124758
+[07/Mar/2022 23:57:09] "GET /static/assets/img/team/3.jpg HTTP/1.1" 200 50436
+[07/Mar/2022 23:57:10] "GET /static/assets/img/team/4.jpg HTTP/1.1" 200 58070
+[07/Mar/2022 23:57:10] "GET /static/assets/img/team/5.jpg HTTP/1.1" 200 63049
+[07/Mar/2022 23:57:10] "GET /static/assets/img/team/1.png HTTP/1.1" 200 335617
+[07/Mar/2022 23:57:10] "GET /static/img/sister/long_term_care.png HTTP/1.1" 200 78628
+[07/Mar/2022 23:57:10] "GET /static/img/sister/Senior_Citizens_Association.jpg HTTP/1.1" 200 213271
+[07/Mar/2022 23:57:10] "GET /static/img/sister/welfare_center.png HTTP/1.1" 200 8229
+[07/Mar/2022 23:57:10] "GET /static/img/sister/1004.png HTTP/1.1" 200 16185
+[07/Mar/2022 23:57:10] "GET /static/img/sister/labor_development.png HTTP/1.1" 200 343074
+[07/Mar/2022 23:57:10] "GET /static/assets/img/portfolio/can5.png HTTP/1.1" 200 796371
+[07/Mar/2022 23:57:10] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:57:11] "GET /static/assets/img/favicon.png HTTP/1.1" 200 34607
+[07/Mar/2022 23:57:13] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:57:13] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:57:15] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:58:00] "GET /main/accounts/mypage HTTP/1.1" 301 0
+[07/Mar/2022 23:58:00] "GET /main/accounts/mypage/ HTTP/1.1" 200 9232
+[07/Mar/2022 23:58:03] "GET /main/accounts/login/ HTTP/1.1" 200 9900
+[07/Mar/2022 23:58:07] "GET /main HTTP/1.1" 301 0
+[07/Mar/2022 23:58:07] "GET /main/ HTTP/1.1" 200 29994
+[07/Mar/2022 23:58:07] "GET /main/map2/ HTTP/1.1" 200 5931
+[07/Mar/2022 23:58:09] "GET /main/graph HTTP/1.1" 200 3674260
+[07/Mar/2022 23:58:19] "GET /main/accounts/login/ HTTP/1.1" 200 9900
+[07/Mar/2022 23:58:21] "GET /static/assets/img/favicon.png HTTP/1.1" 200 34607
+Not Found: /
+[08/Mar/2022 00:04:40] "GET / HTTP/1.1" 404 2165
+Not Found: /manager/html
+[08/Mar/2022 00:17:58] "GET /manager/html HTTP/1.1" 404 2219
+Not Found: /dispatch.asp
+[08/Mar/2022 00:58:47] "GET /dispatch.asp HTTP/1.1" 404 2219
+Not Found: /dispatch.asp
+[08/Mar/2022 04:58:04] "GET /dispatch.asp HTTP/1.1" 404 2219
+Not Found: /boaform/admin/formLogin
+[08/Mar/2022 05:02:45] "GET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0" 404 2275
+[08/Mar/2022 05:46:01] code 400, message Bad request syntax ('MGLNDD_118.67.143.103')
+[08/Mar/2022 05:46:01] "MGLNDD_118.67.143.103" 400 -
+Not Found: /.env
+[08/Mar/2022 06:50:16] "GET /.env HTTP/1.1" 404 2195
+Not Found: /
+[08/Mar/2022 06:50:17] "POST / HTTP/1.1" 404 2166
+[08/Mar/2022 07:32:15,796] - Broken pipe from ('20.110.176.213', 62601)
+
+Not Found: /robots.txt
+[08/Mar/2022 07:32:15] "HEAD /robots.txt HTTP/1.0" 404 2212
+Not Found: /
+[08/Mar/2022 07:47:44] "GET / HTTP/1.1" 404 2168
+Not Found: /dispatch.asp
+[08/Mar/2022 08:04:32] "GET /dispatch.asp HTTP/1.1" 404 2219
+[08/Mar/2022 08:17:33] "GET /main/ HTTP/1.1" 200 29994
+[08/Mar/2022 08:17:33] "GET /static/assets/vendor/aos/aos.css HTTP/1.1" 200 26053
+[08/Mar/2022 08:17:33] "GET /static/assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 200 15563
+[08/Mar/2022 08:17:33] "GET /static/assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 200 13785
+[08/Mar/2022 08:17:33] "GET /static/assets/css/style.css HTTP/1.1" 200 25284
+[08/Mar/2022 08:17:33] "GET /static/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 200 73271
+[08/Mar/2022 08:17:33] "GET /static/assets/vendor/boxicons/css/boxicons.min.css HTTP/1.1" 200 63781
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 163873
+[08/Mar/2022 08:17:34] "GET /main/map2 HTTP/1.1" 301 0
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/aos/aos.js HTTP/1.1" 200 14690
+[08/Mar/2022 08:17:34] "GET /static/img/spoon-and-fork.png HTTP/1.1" 200 21387
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78129
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 200 56222
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 200 35445
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/php-email-form/validate.js HTTP/1.1" 200 2731
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 200 135617
+[08/Mar/2022 08:17:34] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 08:17:34] "GET /static/assets/js/main.js HTTP/1.1" 200 5858
+[08/Mar/2022 08:17:34] "GET /static/assets/js/custom.js HTTP/1.1" 200 5264
+[08/Mar/2022 08:17:34] "GET /static/assets/img/about-img.svg HTTP/1.1" 200 30700
+[08/Mar/2022 08:17:34] "GET /static/img/service1/canteen.png HTTP/1.1" 200 7378
+[08/Mar/2022 08:17:34] "GET /static/img/service1/grandmother.png HTTP/1.1" 200 77252
+[08/Mar/2022 08:17:34] "GET /static/img/service1/daughter.png HTTP/1.1" 200 61274
+[08/Mar/2022 08:17:34] "GET /static/img/service1/help.png HTTP/1.1" 200 63980
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345 HTTP/1.1" 200 92004
+[08/Mar/2022 08:17:34] "GET /static/assets/vendor/boxicons/fonts/boxicons.woff2 HTTP/1.1" 200 102988
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/vol_can.jpg HTTP/1.1" 200 84039
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/can1.jpg HTTP/1.1" 200 67571
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/love.jpg HTTP/1.1" 200 19863
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/can4.jpg HTTP/1.1" 200 91685
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/gra_can.jpg HTTP/1.1" 200 87272
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/canteen.jpg HTTP/1.1" 200 71149
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/can3.jpg HTTP/1.1" 200 124758
+[08/Mar/2022 08:17:34] "GET /static/assets/img/portfolio/love_can.jpg HTTP/1.1" 200 76814
+[08/Mar/2022 08:17:34] "GET /static/js/custom.js HTTP/1.1" 200 5428
+[08/Mar/2022 08:17:34] "GET /static/assets/img/team/2.jpg HTTP/1.1" 200 59118
+[08/Mar/2022 08:17:34] "GET /static/assets/img/team/4.jpg HTTP/1.1" 200 58070
+[08/Mar/2022 08:17:34] "GET /static/assets/img/team/3.jpg HTTP/1.1" 200 50436
+[08/Mar/2022 08:17:34] "GET /static/assets/img/team/1.png HTTP/1.1" 200 335617
+[08/Mar/2022 08:17:34] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 08:17:34] "GET /static/assets/img/team/5.jpg HTTP/1.1" 200 63049
+[08/Mar/2022 08:17:34] "GET /static/img/sister/long_term_care.png HTTP/1.1" 200 78628
+[08/Mar/2022 08:17:34] "GET /static/img/sister/Senior_Citizens_Association.jpg HTTP/1.1" 200 213271
+[08/Mar/2022 08:17:35] "GET /static/img/sister/welfare_center.png HTTP/1.1" 200 8229
+[08/Mar/2022 08:17:35] "GET /static/img/sister/1004.png HTTP/1.1" 200 16185
+[08/Mar/2022 08:17:35] "GET /static/assets/img/portfolio/can5.png HTTP/1.1" 200 796371
+[08/Mar/2022 08:17:35] "GET /static/img/sister/labor_development.png HTTP/1.1" 200 343074
+[08/Mar/2022 08:17:36] "GET /static/assets/img/favicon.png HTTP/1.1" 200 34607
+[08/Mar/2022 08:50:49] "GET /main/ HTTP/1.1" 200 30121
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/aos/aos.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/boxicons/css/boxicons.min.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/spoon-and-fork.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/about-img.svg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/service1/canteen.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/service1/daughter.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/service1/grandmother.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/service1/help.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/vol_can.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/can1.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/love.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/gra_can.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/can4.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/team/1.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/can3.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/love_can.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/can5.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/team/2.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/portfolio/canteen.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/team/3.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/team/5.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/sister/Senior_Citizens_Association.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/sister/long_term_care.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/img/team/4.jpg HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/sister/welfare_center.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/sister/1004.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/img/sister/labor_development.png HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/aos/aos.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/vendor/php-email-form/validate.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:49] "GET /static/assets/js/main.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:50] "GET /static/assets/js/custom.js HTTP/1.1" 304 0
+[08/Mar/2022 08:50:50] "GET /main/map/ HTTP/1.1" 200 12915
+/root/project1/Project1/canteen/webs/graph.py:29: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+[08/Mar/2022 08:50:50] "GET /static/assets/vendor/boxicons/fonts/boxicons.woff2 HTTP/1.1" 304 0
+[08/Mar/2022 08:50:50] "GET /static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345 HTTP/1.1" 304 0
+[08/Mar/2022 08:50:50] "GET /static/js/custom.js HTTP/1.1" 304 0
+Unable to connect to VS Code server: Error in request.
+Error: connect ENOENT /run/user/0/vscode-ipc-682b8960-1eba-417d-b733-ba14c96414bc.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1146:16) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'connect',
+  address: '/run/user/0/vscode-ipc-682b8960-1eba-417d-b733-ba14c96414bc.sock'
+}
+[08/Mar/2022 08:50:50] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 08:50:56] "GET /main/accounts/logout/ HTTP/1.1" 302 0
+[08/Mar/2022 08:50:56] "GET /main/ HTTP/1.1" 200 29994
+[08/Mar/2022 08:50:56] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 08:50:57] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 08:53:50] "GET /main/ HTTP/1.1" 200 29994
+[08/Mar/2022 08:53:51] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 08:53:51] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 08:53:52] "GET /static/assets/img/favicon.png HTTP/1.1" 304 0
+[08/Mar/2022 08:53:54] "GET /main/accounts/signup/ HTTP/1.1" 200 16810
+[08/Mar/2022 08:54:54] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 08:54:58] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 08:54:58] "GET /main/graph HTTP/1.1" 200 3674260
+python: can't open file '/root/project1/Project1/canteen/manage.p': [Errno 2] No such file or directory
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/project1/anaconda3/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/home/project1/anaconda3/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/core/management/commands/runserver.py", line 115, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/core/management/__init__.py", line 381, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/project1/anaconda3/lib/python3.9/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/home/project1/anaconda3/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_framework'
+Watching for file changes with StatReloader
+Performing system checks...
+
+Watching for file changes with StatReloader
+[08/Mar/2022 09:14:13] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:14:14] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 09:14:15] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 09:14:23] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:14:24] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 09:14:24] "GET /main/graph HTTP/1.1" 200 3674260
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 08, 2022 - 09:13:55
+Django version 4.0.3, using settings 'canteen.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+

@@ -23,7 +23,7 @@ class User(models.Model):
 
     # 반환값을 self의 user_name으로 사용자 이름을 반환하도록 설정
     def __str__(self):
-        return {'user_name':self.user_name, 'user_loct':self.user_loct, 'user_id':self.user_id}
+        return {'user_name':self.user_name, 'user_loct':self.user_loct, 'user_id':self.user_id, 'user_pw':user_pw}
 
     class Meta:
         # 테이블명 지정 옵션
