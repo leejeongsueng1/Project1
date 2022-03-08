@@ -8,7 +8,7 @@ urlpatterns = [
     path('map/', views.map, name='map'),
     path('map2/', views.map2, name='map'),
     path('about_us', views.about_us, name='about_us'),
-    path('graph',views.graph, name='graph'),
+    path('graph/',views.graph, name='graph'),
     ]
 
 

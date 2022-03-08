@@ -58,7 +58,7 @@
 		<div class="dropdown ">
 		  <select class="dropdown-button" name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
 		</div>
-		<input type="submit" class="btn" value="조회">
+		<input type="submit" class="btn" value="조회" onclick="info_trans()">
 	</form>
 	</div>
 
@@ -226,7 +226,19 @@
 	</script>
 {% endif %}
 
+	<script type="text/javascript">
+		function info_trans() { 
+		$.ajax({
+			url: `/main/graph/?user_loct_state=${user_loct_state.value}&user_loct_city=${user_loct_city.value}`
+		})
+		setTimeout(function(){
+			document.getElementById('graphs').src = document.getElementById('graphs').src
+		}, 1000);
 
+		
+	}
+
+	</script>
 
 
 
