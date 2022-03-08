@@ -416,3 +416,12 @@ Quit the server with CONTROL-C.
 Watching for file changes with StatReloader
 Performing system checks...
 
+Watching for file changes with StatReloader
+[08/Mar/2022 09:19:27] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:19:28] "GET /main/map2/ HTTP/1.1" 200 5931
+[08/Mar/2022 09:19:29] "GET /main/graph HTTP/1.1" 200 3674260
+[08/Mar/2022 09:19:30] "GET /main/accounts/login/ HTTP/1.1" 200 9898
+[08/Mar/2022 09:20:12] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:20:14] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:20:19] "GET /main/ HTTP/1.1" 200 29992
+[08/Mar/2022 09:20:19] "GET /main/accounts/login/ HTTP/1.1" 200 9898
