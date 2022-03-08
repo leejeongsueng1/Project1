@@ -27,99 +27,42 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Contact us the get started</p>
+      <h2>급식소 찾기</h2>
+      <p>지역을 선택해서 주변 급식소를 빠르게 찾아보세요.</p>
     </div>
 
     <div class="row">
 
-      <div class="col-lg-10 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex align-items-stretch" style="height:680px" data-aos="fade-up" data-aos-delay="100">
         <div class="info">
-          <iframe src="/main/{{map}}" frameborder="0"height="600px" width="1030px" data-aos="zoom-in"></iframe>
+          <iframe src="/main/{{map}}" frameborder="0"height="100%" width="100%" data-aos="zoom-in"></iframe>
         </div>
 
       </div>
-      <div class="col-lg-2 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+
+
+  </div>
+  </div>
+</section><!-- End Contact Us Section -->
+
+<!-- ======= Contact Us Section ======= -->
+<section id="abc" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>지역별 급식소 정보</h2>
+      <p>지역별로 급식소 개수를 알아보세요.</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12 d-flex align-items-stretch" style="height:680px" data-aos="fade-up" data-aos-delay="100">
         <div class="info">
-        <form action="/main/map2/" method="get" id="form_selector">
-          <div class="dropdown d-inline">
-          <select name="user_loct_state" id="user_loct_state"onchange="set_loct_city(this)" style="display: '';"  >
-            <option value="none" hidden>=== 광역시/도 ===</option>
-            <option value="서울특별시">서울특별시</option>
-            <option value="인천광역시">인천광역시</option>
-            <option value="부산광역시">부산광역시</option>
-            <option value="대구광역시">대구광역시</option>
-            <option value="대전광역시">대전광역시</option>
-            <option value="광주광역시">광주광역시</option>
-            <option value="울산광역시">울산광역시</option>
-            <option value="경기도">경기도</option>
-            <option value="강원도">강원도</option>
-            <option value="충청북도">충청북도</option>
-            <option value="충청남도">충청남도</option>
-            <option value="경상북도">경상북도</option>
-            <option value="경상남도">경상남도</option>
-            <option value="전라북도">전라북도</option>
-            <option value="전라남도">전라남도</option>
-            <option value="제주시">제주시</option>
-          </select>
-          </div>
-          <!--test-->
-          <div id="navbar" class="navbar">
-            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
-            </li>
-          </div>
-            <!--test-->
-            <!--test-->
-          <div id="navbar" class="navbar">
-            <li class="dropdown">
-              <i class="bi bi-chevron-down"><select name="user_loct_state" id="user_loct_state"onchange="set_loct_city(this)" style="display: '';"  ><span>광역시/도</span></select></i></a>
-              <ul>
-                  <li><option value="none" hidden>=== 광역시/도 ===</option></li>
-                  <li><option value="서울특별시">서울특별시</option></li>
-                  <li><option value="인천광역시">인천광역시</option></li>
-                  <li><option value="부산광역시">부산광역시</option></li>
-                  <li><option value="대구광역시">대구광역시</option></li>
-                  <li><option value="대전광역시">대전광역시</option></li>
-                  <li><option value="광주광역시">광주광역시</option></li>
-                  <li><option value="울산광역시">울산광역시</option></li>
-                  <li><option value="경기도">경기도</option></li>
-                  <li><option value="강원도">강원도</option></li>
-                  <li><option value="충청북도">충청북도</option></li>
-                  <li><option value="충청남도">충청남도</option></li>
-                  <li><option value="경상북도">경상북도</option></li>
-                  <li><option value="경상남도">경상남도</option></li>
-                  <li><option value="전라북도">전라북도</option></li>
-                  <li><option value="전라남도">전라남도</option></li>
-                  <li></li><option value="제주시">제주시</option></li>
-                </select>
-              </ul>
-            </li>
-          </div>
-            <!--test-->
-            
-          <div class="dropdown d-inline">
-          <select name="user_loct_city" id="user_loct_city" style="display: none;" onchange="set_positions(this)"></select>
-          </div>
-          <input type="submit" class="btn btn-primary" value="조회" id="submitbutton">
-        </form>
+          <iframe src="/main/graph/" frameborder="0"height="100%" width="100%" data-aos="zoom-in" id="graphs"></iframe>
+        </div>
+
       </div>
 
-    </div>
 
   </div>
   </div>
@@ -135,20 +78,20 @@
             <img src="{%static 'assets/img/about-img.svg'%}" class="img-fluid" alt="" data-aos="zoom-in">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
-            <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
+            <h3 data-aos="fade-up">내가 사는 곳의 급식소를 찾아보세요.</h3>
             <p data-aos="fade-up" data-aos-delay="100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              원하는 지역을 선택하시면 저희가 찾아드릴게요<br>
             </p>
             <div class="row">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-receipt"></i>
-                <h4>Corporis voluptates sit</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h4>주변 무료급식소 조회 가능</h4>
+                <p>거주지역을 등록하고 주변 급식소 정보를 받아보세요.</p>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-cube-alt"></i>
-                <h4>Ullamco laboris nisi</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h4>지역별 급식소 정보</h4>
+                <p>우리지역의 급식소 개수를 알아보세요.</p>
               </div>
             </div>
           </div>
@@ -178,7 +121,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/grandmother.png'%}" style="width: 65px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/grandmother.png'%}" style="width: 65px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">노인</a></h4>
               <p class="description">단순히 식사 제공에 그치는 것이 아니라 고령자의 안부 확인, 고독의 완화, 인간적인 교류 등 부차적인 효과를 발생시킨다.</p>
@@ -187,7 +130,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/daughter.png'%}" style="width: 70px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/daughter.png'%}" style="width: 70px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">결식아동</a></h4>
               <p class="description">보호자가 근로, 질병·장애 등의 사유로 주식과 부식을 준비하기 어렵거나, 아동 스스로 식사를 차려 먹기 어려운 경우</p>
@@ -196,7 +139,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
-              <div class="icon"><img src="{% static '/img/service1/help.png'%}" style="width: 65px;" /></i></div>
+              <div class="icon"><img src="{% static '/img/service1/help.png'%}" style="width: 65px;" /></div>
               <br>
               <h4 class="title"><a href="" style="color: #4E4039;">노숙인</a></h4>
               <p class="description">노숙인 지역사회 복귀를 위한 일자리 연계, 신용회복, 의류·물품 지원 및 상담 등 중장기적인 지원도 함께 제공하려 노력중이다.</p>
@@ -213,8 +156,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Check out our beautifull portfolio</p>
+          <h2>gallery</h2>
+          <p>무료급식소</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -234,8 +177,7 @@
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/vol_can.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-1.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="https://news.samsungdisplay.com/20985/" title="More Details"><i class="bi bi-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>App 1</h4>
@@ -246,10 +188,9 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/tab_can.jpg'%}" class="img-fluid" alt="">
+              <img src="{%static 'assets/img/portfolio/can1.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-2.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="http://www.gndomin.com/news/articleView.html?idxno=205158" title="More Details"><i class="bi bi-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Web 3</h4>
@@ -258,12 +199,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/love.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-3.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="https://m.khan.co.kr/national/national-general/article/202111011427001/amp" title="More Details"><i class="bi bi-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>App 2</h4>
@@ -272,55 +212,11 @@
             </div>
           </div>
 
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/canteen.jpg'%}" class="img-fluid" alt="">
+              <img src="{%static 'assets/img/portfolio/can4.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-5.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/volun.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-6.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/pla_can.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-4.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                <a href="https://m.mk.co.kr/news/society/view-amp/2021/12/1113659/" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/portfolio-9.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-9.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="https://m.khan.co.kr/national/national-general/article/202111011427001/amp" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="https://news.sbs.co.kr/amp/news.amp?news_id=N1006544229" title="More Details"><i class="bi bi-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Web 3</h4>
@@ -329,12 +225,65 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/gra_can.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="https://www.fnnews.com/news/202202231245140546" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/canteen.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="http://homelessaction.or.kr/xe/index.php?page=4&document_srl=725065&mid=hlnews" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/can5.png'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="https://m.mk.co.kr/news/society/view-amp/2021/12/1113659/" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{%static 'assets/img/portfolio/can3.jpg'%}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="http://www.ikoreanspirit.com/news/articleView.html?idxno=65925" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="{%static 'assets/img/portfolio/love_can.jpg'%}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-7.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                <a href="http://www.ikoreanspirit.com/news/articleView.html?idxno=65925" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="http://digitalchosun.dizzo.com/m/article.amp.html?contid=2021072080244" title="More Details"><i class="bi bi-link"></i></a>
               </div>
               <div class="portfolio-info">
                 <h4>Card 1</h4>
@@ -343,19 +292,6 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{%static 'assets/img/portfolio/gra_can.jpg'%}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{%static 'assets/img/portfolio/portfolio-8.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                <a href="https://news.sbs.co.kr/amp/news.amp?news_id=N1006544229" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
 
         </div>
 
@@ -368,61 +304,60 @@
 
         <div class="section-title">
           <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
+          <p>자주 하는 질문</p>
         </div>
 
         <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
 
           <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Q. 사이트를 개발하게 된 배경은 무엇인가요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                A. 가정 형편이 어렵거나 부득이한 사정으로 식사를 거를 우려가 있는
+                취약계층(결식 노인, 결식아동, 노숙인 등)들이
+                편하게 급식소를 찾을 수 있는 서비스를 개발하였습니다.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Q. 회원가입을 해야하나요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                A. 회원가입을 하지 않아도 지역을 선택하여 급식소 조회해 볼 수 있습니다.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Q. 무료급식 대상자 조건이 무엇인가요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                <무료급식 대상자 조건><br>
+1. 60세 이상 기초생활수급자 : 신분증 / 등본 / 수급자증명서 / 지방세 세목별 과세증명서<br>
+2. 60세 이상 차상위 계층 : 신분증 / 등본 / 차상위증명서 / 지방세 세목별 과세증명서<br>
+3. 65세 이상 조합원 (독거 어르신) : 신분증 / 등본 / 가족관계증명서 1부<br>
+* 기관마다 조건이 상이하므로 방문전 확인 바랍니다.
+
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Q. 지도에 있는 버튼은 어떤 기능인가요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                A. <중심좌표로 이동> : 본인이 설정한 지역의 시/군/구청으로 지도의 기준점이 재설정됩니다. <br>
+                &nbsp&nbsp <한번에 보기> : 본인이 설정한 지역의 모든 급식소가 한번에 보이도록 해주는 기능입니다.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Q. 주소지 변경이 가능한가요?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                A. 로그인시 오른쪽 상단의 마이페이지에서 비밀번호 입력 후 주소지 변경이 가능합니다.
               </p>
             </div>
           </li>
@@ -438,7 +373,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Team</h2>
-          <p>Our team is always here to help</p>
+          <p>우리 팀을 소개합니다.</p>
         </div>
 
         <div class="row">
@@ -542,8 +477,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Clients</h2>
-          <p>They trusted us</p>
+          <h2>Fellow Worker</h2>
+          <p>함께 일하는 사람들</p>
         </div>
 
         <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">

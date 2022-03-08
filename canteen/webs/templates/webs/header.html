@@ -1,24 +1,22 @@
 <html>
-
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1 class="text-light"><a href="/main"><span>급식소 찾기</span></a></h1>
+        <h1 class="text-light"><a href="/main" style="font-family: 'GongGothicMedium', serif ;"><span>주변 급식소</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/main">Home</a></li>
-          <li><a class="nav-link scrollto" href="/main/#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="/main/#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="/main/#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="/main/#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="/main/#team">Team</a></li>
-          <li class="dropdown"><a href="#" style="display: none;"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="/main/#contact">급식소 찾기</a></li>
+          <li><a class="nav-link scrollto" href="/main/#about">사이트 소개</a></li>
+          <li><a class="nav-link scrollto" href="/main/#services">급식대상</a></li>
+          <li><a class="nav-link scrollto" href="/main/#faq">자주하는 질문</a></li>
+          <li><a class="nav-link scrollto" href="/main/#team">개발진</a></li>
+          <!-- <li class="dropdown"><a href="#" style="display: none;"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -34,14 +32,16 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
+          </li> -->
             {% if user_name %}
-                <li><a class="nav-link scrollto" href="#contact">안녕하세요 {{ user_name }}님!&nbsp&nbsp&nbsp</a></li>
+                <li><a class="nav-link scrollto">안녕하세요 {{ user_name }}님!&nbsp&nbsp&nbsp</a></li>
+                <li class="nav-link scrollto" id="mypage" style="display: '';"><a class="nav-link" href="/main/accounts/mypage">마이페이지</a></li>
             {% endif %}
             <li class="nav-link scrollto" id="signin" style="display: '';"><a class="nav-link" href="/main/accounts/login/">로그인</a></li>
             <li class="nav-link scrollto" id="signout" style="display: none;"><a class="nav-link" href="/main/accounts/logout/">로그아웃</a></li>
             <li class="nav-link scrollto" id="signup" style="display: '';"><a class="nav-link" href="/main/accounts/signup">회원가입</a></li>
-            <li><a class="getstarted scrollto" href="#contact">Get Started</a></li>
+            
+            <li><a class="getstarted scrollto" href="#contact">시작하기</a></li>
             
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -51,7 +51,4 @@
   </header><!-- End Header -->
 
     
-
-
-
 </html>

@@ -1,0 +1,109 @@
+{% extends 'bases.html' %}
+{% load static %}
+{% block content%}
+<section id="hero" class="d-flex align-items-center">
+<div class="container">
+    <h1>회원정보</h1><br>
+    <div class="row">
+        <div class="col-12">
+        이름 : {{user_name}} <br>
+        회원 아이디 : {{user_id}} <br>
+        거주지역 : {{user_loct}}
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <div class="col-12">
+            {{ error }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input id='bt1' type="submit" class="btn" onclick="open_ch_loct()"value="거주지역변경">
+            <div id="loct_div" class="collapse show" data-bs-parent=".faq-list" style="display:none;">
+              <p>
+                   <form action="" method="post" >
+                        {% csrf_token %}
+                        <h5>변경할 지역을 선택하세요</h5> <br>
+                        
+                        <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)"  >
+                            <option value="none" hidden>=== 광역시/도 ===</option>
+                            <option value="서울특별시">서울특별시</option>
+                            <option value="인천광역시">인천광역시</option>
+                            <option value="부산광역시">부산광역시</option>
+                            <option value="대구광역시">대구광역시</option>
+                            <option value="대전광역시">대전광역시</option>
+                            <option value="광주광역시">광주광역시</option>
+                            <option value="울산광역시">울산광역시</option>
+                            <option value="경기도">경기도</option>
+                            <option value="강원도">강원도</option>
+                            <option value="충청북도">충청북도</option>
+                            <option value="충청남도">충청남도</option>
+                            <option value="경상북도">경상북도</option>
+                            <option value="경상남도">경상남도</option>
+                            <option value="전라북도">전라북도</option>
+                            <option value="전라남도">전라남도</option>
+                            <option value="제주시">제주시</option>
+                        </select>
+                        <p></p>
+                        <select name="user_loct_city" id="user_loct_city" style="display: none;">
+                        <input type="text" name="loct_ch" value="0" style="display: none;">
+                        <br>
+                        <br>
+                        <input type="submit" class="btn" value="변경">
+                        <input type="button" onclick="close_ch_loct()" class="btn" value="닫기">
+                    </form>
+                </p>
+            </div>
+            <br>
+
+                <input id='bt2' type="submit" class="btn" onclick="open_ch()"value="비밀번호 변경" style='margin-top:8px;'>
+                <div id="change_div" class="collapse show" data-bs-parent=".faq-list" style="display:none;">
+                  <p>
+                       <form id="pw1"action="" method="post" >
+                            {% csrf_token %}
+                            <h5>비밀번호를 변경하시려면 입력하세요.</h5> <br>
+                            <label for="password1">기존 비밀번호 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </label>
+                            <input name='password1'type="password"> &nbsp<br><br>
+                            <label for="newpassword">변경할 비밀번호 &nbsp&nbsp&nbsp&nbsp&nbsp: </label>
+                            <input name='newpassword'type="password"> <br><br>
+                            <label for="newpassword2">변경할 비밀번호 확인 &nbsp: </label>
+                            <input name='newpassword2'type="password">
+
+                            <input type="text" name="change" value="1" style="display: none;">
+                                
+
+                            <br><br>
+                            <input type="submit" class="btn" value="변경">
+                            <input type="button" onclick="close_ch()" class="btn" value="닫기">
+                        </form>
+                    </p>
+                </div>
+                <br>
+
+            <input id ="bt3" type="button" class="btn" value="회원탈퇴" onclick="open_del()" style='margin-top:8px;'>
+                <div id="del_div" class="collapse show" data-bs-parent=".faq-list" style="display: none;">
+                    <form action="" method="post" >
+                        {% csrf_token %}
+                        <h5>회원탈퇴를 원하시면 비밀번호를 입력하세요.</h5> <br>
+                        <label for="password1">비밀번호 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </label>
+                        <input name='password1'type="password"> &nbsp<br><br>
+        
+                        <input type="text" name="delete" value="2" style="display: none;">
+                        <input type="submit" class="btn" value="탈퇴">
+                        <input id="del_close" onclick="close_del()" class="btn" style="width:60px" value="닫기">
+                    </form>
+                  </p>
+                </div>
+           
+
+        </div>
+    </div>
+   
+</div>
+</section>
+<script src="{% static '/js/custom.js' %}"></script>
+
+{% endblock %}
+
+

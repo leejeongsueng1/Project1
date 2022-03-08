@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import User
 from django.contrib.auth.hashers import make_password, check_password
+from webs.loadingContext import *
+
 # Create your views here.
 
 # 회원가입
@@ -8,25 +10,13 @@ def signup(request):
     # 맨처음 화면로드시 GET방식으로 통신
     if request.method == 'GET':
         #이미 로그인이 되어있는지 확인
-        session_id = request.session.session_key
-        user_id = request.session.get('user')
+        user_data = check_sessions(request)
 
-        try:
-            users = User.objects.filter(user_id = user_id)
-            for u in users:
-                user_name = u.user_name 
-                user_loct = u.user_loct
-            context = {'user_id':user_id,
-                        'session_key':session_id,
-                        'user_name': user_name,
-                        'user_loct':user_loct}
-            #이미 로그인이 되어있다면 이미 로그인 중이라는 화면 출력
-            return render(request,'accounts/already_login.html', context)
-        except:
-            users = None
-        
-        print('안된다')
-        return render(request, 'accounts/signup.html')
+        if user_data:
+            return render(request,'accounts/already_login.html', user_data)
+        else:
+            return render(request,'accounts/signup.html')
+
     # signup의 form 의 method가 POST방식이므로 sign up 버튼을 클릭시 POST방식의 HTTP request발생
     elif request.method == 'POST':
         # POST.get으로 가져오면 값이 없을경우 None을 저장해줌
@@ -36,7 +26,7 @@ def signup(request):
         user_password2 = request.POST.get('password2')
         user_loct_state = request.POST.get('user_loct_state')
         user_loct_city = request.POST.get('user_loct_city')
-        user_cert = request.POST.get('user_cert')
+        user_cert = ''
 
         res_data = {}
 
@@ -45,7 +35,7 @@ def signup(request):
         # 비밀번호1 과 비밀번호2가 일치하지 않으면 에러를 발생시키고 화면에 렌더링
         # 모든값이 입력되고 비밀번호가 일치하면 저장하고 모델에 입력후 save
 
-        if not (user_id and user_name and user_password1 and user_password2 and user_cert):
+        if not (user_id and user_name and user_password1 and user_password2):
             res_data['error'] = '모든 값을 입력해야합니다.'
             return render(request,'accounts/signup.html', res_data)
         elif user_password1 != user_password2:
@@ -73,25 +63,13 @@ def signup(request):
 # 로그인
 def login(request):
     if request.method == 'GET':
-        #이미 로그인이 되어있는지 확인
-        session_id = request.session.session_key
-        user_id = request.session.get('user')
+       #이미 로그인이 되어있는지 확인
+        user_data = check_sessions(request)
 
-        try:
-            users = User.objects.filter(user_id = user_id)
-            for u in users:
-                user_name = u.user_name 
-                user_loct = u.user_loct
-            context = {'user_id':user_id,
-                        'session_key':session_id,
-                        'user_name': user_name,
-                        'user_loct':user_loct}
-            #이미 로그인이 되어있다면 이미 로그인 중이라는 화면 출력
-            return render(request,'accounts/already_login.html', context)
-        except:
-            users = None
-        print('안된다')
-        return render(request, 'accounts/login.html')
+        if user_data:
+            return render(request,'accounts/already_login.html', user_data)
+        else:
+            return render(request,'accounts/login.html')
     elif request.method == 'POST':
         userid = request.POST.get('user_id')
         password = request.POST.get('password')
@@ -119,6 +97,71 @@ def logout(request):
         del(request.session['user'])
         request.session.flush()
     return redirect('/main')
+
+
+def mypage(request):
+    # 맨처음 화면로드시 GET방식으로 통신
+    if request.method == 'GET':
+        #이미 로그인이 되어있는지 확인
+        user_data = check_sessions(request)
+
+        if user_data:
+            return render(request,'accounts/mypage.html', user_data)
+        else:
+            return render(request,'accounts/no_user.html')
+
+    # POST방식으로 
+    elif request.method == 'POST':
+        # POST.get으로 가져오면 값이 없을경우 None을 저장해줌
+        user_id = request.session.get('user')
+        users = User.objects.filter(user_id = user_id)
+        context={}
+        user_data = check_sessions(request)
+        context['map'] = user_data['map']
+        context['user_id'] = user_data['user_id']
+        context['session_key'] = user_data['session_key']
+        context['user_name'] = user_data['user_name']
+        context['user_loct'] = user_data['user_loct']
+
+        if request.POST.get('loct_ch'):
+            for u in users:
+                user_loct_state = request.POST.get('user_loct_state')
+                user_loct_city = request.POST.get('user_loct_city')
+                u.user_loct = user_loct_state + ' ' + user_loct_city
+                u.save()
+            return redirect('/main/')
+        if request.POST.get('change'):
+            for u in users:
+                real_password = u.user_pw
+                password1 = request.POST.get('password1')
+                newpassword = request.POST.get('newpassword')
+                newpassword2 = request.POST.get('newpassword2')
+                if check_password(password1,real_password):
+                    if newpassword == newpassword2:
+                        u.user_pw = make_password(newpassword2)
+                        u.save()
+                        del(request.session['user'])
+                        request.session.flush()
+                        return redirect('/main/')
+                    else:
+                        context['error'] = '변경할 비밀번호가 서로 다릅니다.'
+                        return render(request, 'accounts/mypage.html',context)
+                else:
+                    context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
+                    return render(request, 'accounts/mypage.html',context)
+        if request.POST.get('delete'):
+            for u in users:
+                real_password = u.user_pw
+            password1 = request.POST.get('password1')
+            if check_password(password1,real_password):
+                users.delete()
+                del(request.session['user'])
+                request.session.flush()
+                return redirect('/main/')
+            else:
+                context['error'] = '기존 비밀번호 입력이 틀렸습니다.'
+                return render(request, 'accounts/mypage.html',context)
+
 
 
 

@@ -5,6 +5,7 @@
 <div class="container">
     <h1>회원가입</h1>
     <div class="row">
+        <br>
         <div class="col-12">
             {{ error }}
         </div>
@@ -23,16 +24,13 @@
                 <br>
                 비밀번호 :
                 <br>
-                <input name="password1" type="text" >
+                <input name="password1" type="password" >
                 <br>
                 비밀번호 확인 :
                 <br>
-                <input name="password2" type="text" >
+                <input name="password2" type="password" >
                 <br>
-                관리번호 :
-                <br>
-                <input name="user_cert" type="text" >
-                <br>
+
                 거주지역
                 <br>
                 <!-- # disalbed 옵션으로 선택불가능하게 조정해보기 -->
@@ -56,12 +54,12 @@
                     <option value="제주시">제주시</option>
                 </select>
                 <br>
-                <br>
+                <p></p>
                 <select name="user_loct_city" id="user_loct_city" style="display: none;">
                     
                 </select>
                 <br><br>
-                <input type="submit" class="btn btn-primary" value="sign up">
+                <input type="submit" class="btn" value="sign up">
             </form>
         </div>
     </div>
