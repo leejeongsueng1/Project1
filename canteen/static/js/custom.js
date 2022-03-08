@@ -82,3 +82,83 @@ function set_positions(obj){
     
 }
     
+
+
+
+
+
+function open_ch_loct(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = 'none';
+    target2 = document.getElementById('bt2');
+    target2.style.display = 'none';
+    target3 = document.getElementById('bt3');
+    target3.style.display = 'none';
+    target4 = document.getElementById('loct_div');
+    target4.style.display = '';
+
+}
+
+function close_ch_loct(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = '';
+    target2 = document.getElementById('bt2');
+    target2.style.display = '';
+    target3 = document.getElementById('bt3');
+    target3.style.display = '';
+    target4 = document.getElementById('loct_div');
+    target4.style.display = 'none';
+
+}
+
+function open_ch(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = 'none';
+    target2 = document.getElementById('bt2');
+    target2.style.display = 'none';
+    target3 = document.getElementById('bt3');
+    target3.style.display = 'none';
+    target4 = document.getElementById('change_div');
+    target4.style.display = '';
+
+}
+
+function close_ch(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = '';
+    target2 = document.getElementById('bt2');
+    target2.style.display = '';
+    target3 = document.getElementById('bt3');
+    target3.style.display = '';
+    target4 = document.getElementById('change_div');
+    target4.style.display = 'none';
+
+
+}
+
+function open_del(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = 'none';
+    target2 = document.getElementById('bt2');
+    target2.style.display = 'none';
+    target3 = document.getElementById('bt3');
+    target3.style.display = 'none';
+    target4 = document.getElementById('del_div');
+    target4.style.display = '';
+
+}
+
+
+function close_del(){
+    target1 = document.getElementById('bt1');
+    target1.style.display = '';
+    target2 = document.getElementById('bt2');
+    target2.style.display = '';
+    target3 = document.getElementById('bt3');
+    target3.style.display = '';
+    target4 = document.getElementById('del_div');
+    target4.style.display = 'none';
+
+}
+
+

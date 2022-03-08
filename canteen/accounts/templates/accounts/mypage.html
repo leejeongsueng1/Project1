@@ -1,5 +1,5 @@
 {% extends 'bases.html' %}
-
+{% load static %}
 {% block content%}
 <section id="hero" class="d-flex align-items-center">
 <div class="container">
@@ -19,8 +19,45 @@
     </div>
     <div class="row">
         <div class="col-12">
+            <input id='bt1' type="submit" class="btn" onclick="open_ch_loct()"value="거주지역변경">
+            <div id="loct_div" class="collapse show" data-bs-parent=".faq-list" style="display:none;">
+              <p>
+                   <form action="" method="post" >
+                        {% csrf_token %}
+                        <h5>변경할 지역을 선택하세요</h5> <br>
+                        
+                        <select name="user_loct_state" id="user_loct_state" onchange="set_loct_city(this)"  >
+                            <option value="none" hidden>=== 광역시/도 ===</option>
+                            <option value="서울특별시">서울특별시</option>
+                            <option value="인천광역시">인천광역시</option>
+                            <option value="부산광역시">부산광역시</option>
+                            <option value="대구광역시">대구광역시</option>
+                            <option value="대전광역시">대전광역시</option>
+                            <option value="광주광역시">광주광역시</option>
+                            <option value="울산광역시">울산광역시</option>
+                            <option value="경기도">경기도</option>
+                            <option value="강원도">강원도</option>
+                            <option value="충청북도">충청북도</option>
+                            <option value="충청남도">충청남도</option>
+                            <option value="경상북도">경상북도</option>
+                            <option value="경상남도">경상남도</option>
+                            <option value="전라북도">전라북도</option>
+                            <option value="전라남도">전라남도</option>
+                            <option value="제주시">제주시</option>
+                        </select>
+                        <p></p>
+                        <select name="user_loct_city" id="user_loct_city" style="display: none;">
+                        <input type="text" name="loct_ch" value="0" style="display: none;">
+                        <br>
+                        <br>
+                        <input type="submit" class="btn" value="변경">
+                        <input type="button" onclick="close_ch_loct()" class="btn" value="닫기">
+                    </form>
+                </p>
+            </div>
+            <br>
 
-                <input id='bt1' type="submit" class="btn" onclick="open_ch()"value="비밀번호 변경">
+                <input id='bt2' type="submit" class="btn" onclick="open_ch()"value="비밀번호 변경" style='margin-top:8px;'>
                 <div id="change_div" class="collapse show" data-bs-parent=".faq-list" style="display:none;">
                   <p>
                        <form id="pw1"action="" method="post" >
@@ -44,7 +81,7 @@
                 </div>
                 <br>
 
-            <input id ="bt2" type="button" class="btn" value="회원탈퇴" onclick="open_del()" style='margin-top:8px;'>
+            <input id ="bt3" type="button" class="btn" value="회원탈퇴" onclick="open_del()" style='margin-top:8px;'>
                 <div id="del_div" class="collapse show" data-bs-parent=".faq-list" style="display: none;">
                     <form action="" method="post" >
                         {% csrf_token %}
@@ -65,49 +102,7 @@
    
 </div>
 </section>
-<script>
-    function close_ch(){
-    target1 = document.getElementById('bt1');
-    target1.style.display = '';
-    target2 = document.getElementById('change_div');
-    target2.style.display = 'none';
-    target3 = document.getElementById('bt2');
-    target3.style.display = '';
-    
-    
-    }
-    function open_ch(){
-        target1 = document.getElementById('bt1');
-        target1.style.display = 'none';
-        target2 = document.getElementById('change_div');
-        target2.style.display = '';
-        target3 = document.getElementById('bt2');
-        target3.style.display = 'none';
-
-    }
-
-    function close_del(){
-    target1 = document.getElementById('bt2');
-    target1.style.display = '';
-    target2 = document.getElementById('del_div');
-    target2.style.display = 'none';
-    target3 = document.getElementById('bt1');
-    target3.style.display = '';
-    
-    
-    }
-    function open_del(){
-        target1 = document.getElementById('bt2');
-        target1.style.display = 'none';
-        target2 = document.getElementById('del_div');
-        target2.style.display = '';
-        target3 = document.getElementById('bt1');
-        target3.style.display = 'none';
-
-    }
-
-
-</script>
+<script src="{% static '/js/custom.js' %}"></script>
 
 {% endblock %}
 

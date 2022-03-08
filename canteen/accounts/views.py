@@ -123,6 +123,13 @@ def mypage(request):
         context['user_name'] = user_data['user_name']
         context['user_loct'] = user_data['user_loct']
 
+        if request.POST.get('loct_ch'):
+            for u in users:
+                user_loct_state = request.POST.get('user_loct_state')
+                user_loct_city = request.POST.get('user_loct_city')
+                u.user_loct = user_loct_state + ' ' + user_loct_city
+                u.save()
+            return redirect('/main/')
         if request.POST.get('change'):
             for u in users:
                 real_password = u.user_pw
